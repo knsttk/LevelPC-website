@@ -1,0 +1,9 @@
+<svg width="15.000000" height="15.000000" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<desc>
+			Created with Pixso.
+	</desc>
+	<defs/>
+	<path id="Прямоугольник 110" d="M1 0L14 0C14.55 0 15 0.44 15 1L15 11C15 11.55 14.55 12 14 12L1 12C0.44 12 0 11.55 0 11L0 1C0 0.44 0.44 0 1 0ZM1 1L14 1L14 11L1 11L1 1Z" fill="#FFFFFF" fill-opacity="1.000000" fill-rule="evenodd"/>
+	<path id="Прямоугольник 111" d="M1 11L8 11C8.55 11 9 11.44 9 12L9 14C9 14.55 8.55 15 8 15L1 15C0.44 15 0 14.55 0 14L0 12C0 11.44 0.44 11 1 11ZM1 12L8 12L8 14L1 14L1 12Z" fill="#FFFFFF" fill-opacity="1.000000" fill-rule="evenodd"/>
+	<circle id="Эллипс 28" cx="10.000000" cy="6.000000" r="2.500000" stroke="#FFFFFF" stroke-opacity="1.000000" stroke-width="1.000000"/>
+</svg>

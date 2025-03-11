@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Главная | LevelPC</title>
+    <!-- <link rel="icon" href="/assets/icons/favicon.svg" type="image/x-icon"> -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+</head>
+<body>
+    <header class="header-wrapper">
+        <div class="header-body">
+            <div class="header-left-part">
+                <img class="header-logo" src="/assets/icons/main-logo.svg"></img>
+                <button class="burger-menu-button">
+                    <img src="assets/icons/catalogue-header-icon.svg" alt="">
+                    <p class="header-nav-button-label">МЕНЮ</p>
+                </button>
+                
+                <div class="burger-menu-overlay"></div> 
+                
+                <div class="burger-menu-wrapper">
+                    <div class="burger-menu-container">
+                        <img class="header-logo" src="/assets/icons/main-logo.svg"></img>
+                        <button class="header-nav-button header-catalogue-button burger-catalogue-button">
+                            <img src="assets/icons/catalogue-header-icon.svg" alt="" class="header-button-icon">
+                            <p class="header-nav-button-label">КАТАЛОГ</p>
+                        </button>
+                        <button class="header-nav-button header-configurator-button">
+                            <img src="assets/icons/configurator-icon.svg" alt="" class="header-button-icon">
+                            <p class="header-nav-button-label">КОНФИГУРАТОР</p>
+                        </button>
+                        <button class="header-nav-button header-about-button">
+                            <img src="assets/icons/about-icon.svg" alt="" class="header-button-icon">
+                            <p class="header-nav-button-label">О КОМПАНИИ</p>
+                        </button>
+                        <button class="header-nav-button header-contacts-button">
+                            <img src="assets/icons/contacts-icon.svg" alt="" class="header-button-icon">
+                            <p class="header-nav-button-label">КОНТАКТЫ</p>
+                        </button>
+                        <button class="header-nav-button header-guarantee-button">
+                            <img src="assets/icons/guarantee-icon.svg" alt="" class="header-button-icon">
+                            <p class="header-nav-button-label">ГАРАНТИЯ</p>
+                        </button>
+                    </div>
+                </div>
+                
+                <nav class="header-nav-wrapper">
+                    <button class="header-nav-button header-catalogue-button main-catalogue-button">
+                        <img src="assets/icons/catalogue-header-icon.svg" alt="" class="header-button-icon">
+                        <p class="header-nav-button-label">КАТАЛОГ</p>
+                    </button>
+                    <button class="header-nav-button header-configurator-button">
+                        <img src="assets/icons/configurator-icon.svg" alt="" class="header-button-icon">
+                        <p class="header-nav-button-label">КОНФИГУРАТОР</p>
+                    </button>
+                    <!-- <button class="header-nav-button header-pcparts-button">
+                        <img src="assets/icons/pc-parts-icon.svg" alt="" class="header-button-icon">
+                        <p class="header-nav-button-label">КОМПЛЕКТУЮЩИЕ</p>
+                    </button> -->
+                    <button class="header-nav-button header-about-button first-about-button">
+                        <img src="assets/icons/about-icon.svg" alt="" class="header-button-icon">
+                        <p class="header-nav-button-label">О КОМПАНИИ</p>
+                    </button>
+                    <button class="header-nav-button header-contacts-button first-contacts-button">
+                        <img src="assets/icons/contacts-icon.svg" alt="" class="header-button-icon">
+                        <p class="header-nav-button-label">КОНТАКТЫ</p>
+                    </button>
+                    <button class="header-nav-button header-guarantee-button first-guarantee-button">
+                        <img src="assets/icons/guarantee-icon.svg" alt="" class="header-button-icon">
+                        <p class="header-nav-button-label">ГАРАНТИЯ</p>
+                    </button>
+                    <button class="header-nav-button header-more-button">
+                        <p class="header-nav-button-label">ЕЩЁ</p>
+                    </button>
+                        <div class="header-more-menu">
+                            <button class="header-nav-button header-about-button more-menu-button">
+                                <img src="assets/icons/about-icon.svg" alt="" class="header-button-icon">
+                                <p class="header-nav-button-label">О КОМПАНИИ</p>
+                            </button>
+                            <button class="header-nav-button header-contacts-button more-menu-button">
+                                <img src="assets/icons/contacts-icon.svg" alt="" class="header-button-icon">
+                                <p class="header-nav-button-label">КОНТАКТЫ</p>
+                            </button>
+                            <button class="header-nav-button header-guarantee-button more-menu-button">
+                                <img src="assets/icons/guarantee-icon.svg" alt="" class="header-button-icon">
+                                <p class="header-nav-button-label">ГАРАНТИЯ</p>
+                            </button>
+                        </div>
+                    
+                </nav>
+            </div>
+            <div class="header-right-part">
+                <input type="search" class="header-search" placeholder="Поиск">
+                <div class="header-connect-buttons">
+                    <button class="header-connect-button">
+                        <svg class="header-connect-icon" width="31" height="31" viewBox="0 0 31 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <ellipse cx="15.64" cy="15.64" rx="15.64" ry="15.64" fill="#9F0E0E"/>
+                            <path d="M11.11 7.29H20.6C22.69 7.29 24.39 8.98 24.39 11.08V20.56C24.39 22.65 22.69 24.35 20.6 24.35H11.11C9.02 24.35 7.32 22.65 7.32 20.56V11.08C7.32 8.98 9.02 7.29 11.11 7.29ZM22 10.6C22 11.13 21.58 11.55 21.05 11.55C20.53 11.55 20.11 11.13 20.11 10.6C20.11 10.08 20.53 9.66 21.05 9.66C21.58 9.66 22 10.08 22 10.6ZM19.65 15.82C19.65 17.91 17.95 19.61 15.85 19.61C13.76 19.61 12.06 17.91 12.06 15.82C12.06 13.72 13.76 12.03 15.85 12.03C17.95 12.03 19.65 13.72 19.65 15.82Z" fill="white" fill-rule="evenodd"/>
+                          </svg>
+                    </button>
+                    <button class="header-connect-button">
+                        <svg class="header-connect-icon" width="31" height="31" viewBox="0 0 31 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <ellipse cx="15.64" cy="15.64" rx="15.64" ry="15.64" fill="#9F0E0E"/>
+                          <path d="M22.38 7.44S24.12 6.72 23.97 8.47C23.93 9.2 23.49 11.72 23.15 14.46L22 22.56S21.9 23.75 21.03 23.95C20.16 24.16 18.86 23.23 18.62 23.02C18.43 22.87 15 20.55 13.8 19.41C13.46 19.1 13.07 18.48 13.84 17.76L18.91 12.6C19.49 11.98 20.07 10.54 17.65 12.29L10.9 17.19S10.13 17.71 8.68 17.25L5.55 16.21S4.39 15.44 6.37 14.67C11.19 12.24 17.12 9.76 22.38 7.44Z" fill="white"/>
+                        </svg>
+                    </button>
+                    <button class="header-connect-button">
+                        <svg class="header-connect-icon" width="31" height="31" viewBox="0 0 31 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <ellipse cx="15.64" cy="15.64" rx="15.64" ry="15.64" fill="#9F0E0E"/>
+                            <path d="M25.16 19.01C24.71 18.47 24.19 17.98 23.69 17.51C23.51 17.34 23.33 17.17 23.15 16.99C22.65 16.5 22.63 16.31 23.03 15.75C23.31 15.36 23.6 14.97 23.89 14.59C24.15 14.25 24.41 13.9 24.67 13.54L24.72 13.47C25.21 12.79 25.72 12.09 25.99 11.24C26.06 11.02 26.13 10.69 25.96 10.42C25.8 10.14 25.47 10.06 25.24 10.02C25.13 10 25.01 10 24.91 10L21.7 10L21.67 10C21.19 10 20.86 10.23 20.67 10.7C20.49 11.15 20.3 11.62 20.07 12.08C19.63 12.99 19.06 14.03 18.24 14.9L18.2 14.94C18.11 15.04 18 15.16 17.92 15.16C17.91 15.16 17.89 15.16 17.88 15.15C17.71 15.09 17.59 14.68 17.6 14.48C17.6 14.48 17.6 14.48 17.6 14.48L17.6 10.77C17.6 10.75 17.59 10.74 17.59 10.73C17.51 10.12 17.33 9.75 16.65 9.62C16.63 9.61 16.61 9.61 16.59 9.61L13.25 9.61C12.71 9.61 12.41 9.83 12.13 10.16C12.05 10.25 11.9 10.43 11.97 10.66C12.05 10.88 12.31 10.93 12.4 10.95C12.81 11.03 13.05 11.28 13.12 11.73C13.23 12.5 13.25 13.33 13.16 14.33C13.14 14.61 13.09 14.83 13.01 15.01C12.99 15.05 12.93 15.19 12.86 15.19C12.84 15.19 12.78 15.18 12.67 15.11C12.41 14.93 12.23 14.68 12 14.37C11.25 13.3 10.62 12.13 10.08 10.79C9.87 10.29 9.5 10.02 9.01 10.01C8.48 10 8 10 7.54 10C7.03 10 6.57 10 6.11 10.01C5.72 10.02 5.45 10.13 5.31 10.36C5.17 10.58 5.18 10.88 5.34 11.23C6.62 14.09 7.79 16.16 9.11 17.96C10.04 19.22 10.97 20.09 12.05 20.71C13.18 21.35 14.44 21.67 15.92 21.67C16.08 21.67 16.26 21.66 16.43 21.66C17.29 21.61 17.6 21.3 17.64 20.47C17.66 20.04 17.71 19.6 17.92 19.21C18.05 18.97 18.18 18.97 18.22 18.97C18.29 18.97 18.39 19.01 18.5 19.08C18.68 19.2 18.84 19.36 18.97 19.5C19.1 19.64 19.22 19.78 19.34 19.91C19.6 20.21 19.88 20.51 20.16 20.8C20.78 21.44 21.47 21.72 22.26 21.66L25.2 21.66C25.21 21.66 25.21 21.66 25.22 21.65C25.51 21.64 25.77 21.47 25.92 21.21C26.1 20.88 26.1 20.46 25.91 20.09C25.69 19.67 25.41 19.31 25.16 19.01Z" fill="white"/>
+                          </svg>
+                    </button>
+                </div>
+                <div class="header-functional-buttons">
+                    <img src="assets/icons/compare-icon.svg" alt="" class="header-funcbutton-icon">
+                    <img src="assets/icons/cart-icon.svg" alt="" class="header-funcbutton-icon">
+                    <img src="assets/icons/user-icon.svg" alt="" class="header-funcbutton-icon">
+                </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="catalogue-menu">
+        <div class="catalogue-menu-left">
+            <ul>
+                <li data-category="computers">Компьютеры
+                    <img src="assets/icons/catalogue-arrow-icon.svg" alt="">
+                </li>
+                <li data-category="components">Комплектующие
+                    <img src="assets/icons/catalogue-arrow-icon.svg" alt="">
+                </li>
+                <li data-category="laptops">Ноутбуки
+                    <img src="assets/icons/catalogue-arrow-icon.svg" alt="">
+                </li>
+                <li data-category="monitors">Мониторы
+                    <img src="assets/icons/catalogue-arrow-icon.svg" alt="">
+                </li>
+                <li data-category="peripherals">Периферия
+                    <img src="assets/icons/catalogue-arrow-icon.svg" alt="">
+                </li>
+            </ul>
+        </div>
+        <div class="catalogue-divider"></div>
+        <div class="catalogue-menu-right">
+            <div class="category-content active" id="computers">
+                <p class="catalogue-category-title">Игровые компьютеры</p>
+                <div class="category-list">
+                    <ul class="computers-list-titles">
+                        <li class="computers-list-title"><a href="">Серии игровых компьютеров</a></li>
+                        <li><a href="">Сборки на процессорах Ryzen 5</a></li>
+                        <li><a href="">Сборки на процессорах Ryzen 7</a></li>
+                        <li><a href="">Сборки на процессорах Ryzen 9</a></li>
+                    </ul>
+                    <ul class="computers-list-titles">
+                        <li><a href="">Сборки на процессорах Intel Core-i3</a></li>
+                        <li><a href="">Сборки на процессорах Intel Core-i5</a></li>
+                        <li><a href="">Сборки на процессорах Intel Core-i7</a></li>
+                        <li><a href="">Сборки на процессорах Intel Core-i9</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="category-content" id="components">
+                <p class="catalogue-category-title">Комплектующие</p>
+                <div class="category-list">
+                    <ul class="computers-list-titles">
+                        <li class="computers-list-title"><a href=""></a>Процессоры</li>
+                        <li><a href="">Видеокарты</a></li>
+                        <li><a href="">Материнские платы</a></li>
+                        <li><a href="">Оперативная память</a></li>
+                    </ul>
+                    <ul class="computers-list-titles">
+                        <li><a href="">Диски SSD</a></li>
+                        <li><a href="">Жесткие диски</a></li>
+                        <li><a href="">Блоки питания</a></li>
+                        <li><a href="">Корпуса</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="category-content" id="monitors">
+                <p class="catalogue-category-title">Мониторы</p>
+                <div class="category-list">
+                    <ul class="computers-list-titles">
+                        <li class="computers-list-title"><a href="">Мониторы диагональю до 22 дюймов</a></li>
+                        <li><a href="">Мониторы диагональю до 24 дюймов</a></li>
+                        <li><a href="">Мониторы диагональю до 27 дюймов</a></li>
+                        <li><a href="">Мониторы диагональю до 32 дюймов</a></li>
+                    </ul>
+                    <ul class="computers-list-titles">
+                        <li><a href="">Мониторы диагональю от 32 дюймов</a></li>
+                        <li><a href="">Мониторы с частотой кадров от 75 Гц</a></li>
+                        <li><a href="">Мониторы с частотой кадров от 120 Г</a></li>
+                        <li><a href="">Мониторы с частотой кадров от 144 Г</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="category-content" id="laptops">
+                <!-- Содержимое для мониторов -->
+                <p class="catalogue-category-title">Ноутбуки</p>
+                <div class="category-list">
+                    <ul class="computers-list-titles">
+                        <li class="computers-list-title">Здесь что-то будет...</li>
+                        <li>Здесь что-то будет...</li>
+                        <li>Здесь что-то будет...</li>
+                        <li>Здесь что-то будет...</li>
+                    </ul>
+                    <ul class="computers-list-titles">
+                        <li>Здесь что-то будет...</li>
+                        <li>Здесь что-то будет...</li>
+                        <li>Здесь что-то будет...</li>
+                        <li>Здесь что-то будет...</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="category-content" id="peripherals">
+                <!-- Содержимое для периферии -->
+                <p class="catalogue-category-title">Периферия</p>
+                <div class="category-list">
+                    <ul class="computers-list-titles">
+                        <li class="computers-list-title"><a href="">Клавиатуры</a></li>
+                        <li><a href="">Мыши</a></li>
+                        <li><a href="">Наушники</a></li>
+                        <li><a href="">Web-камеры</a></li>
+                    </ul>
+                    <ul class="computers-list-titles">
+                        <li><a href="">Коврики</a></li>
+                        <!-- <li> </li>
+                        <li> </li>
+                        <li> </li> -->
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <section class="slider-wrapper"  id="slide1">
+        <div class="slider-content">
+            <!-- Слайды с изображениями и текстом -->
+            <div class="slider-images" >
+                <div class="slide active">
+                    <img src="assets/images/banners/mainpage_slider-1.png" alt="Slide 1">
+                    <div class="slider-title">
+                        <h1>Настольные компьютеры</h1>
+                        <p>Мощные игровые компьютеры на процессорах последнего поколения от Intel и AMD с видеокартами серии GTX и RTX. Превосходная производительность для любых игр.</p>
+                    </div>
+                </div>
+                <div class="slide">
+                    <img src="assets/images/banners/mainpage_slider-2.png" alt="Slide 2">
+                    <div class="slider-title">
+                        <h1>Ноутбуки</h1>
+                        <p>Современные ноутбуки для работы и игр с процессорами Ryzen 5 и Intel Core-i5. Легкость и мобильность в сочетании с мощностью.</p>
+                    </div>
+                </div>
+                <div class="slide">
+                    <img src="assets/images/banners/mainpage_slider-3.png" alt="Slide 3">
+                    <div class="slider-title">
+                        <h1>Мониторы</h1>
+                        <p>Игровые мониторы с высокой частотой обновления и минимальным временем отклика. Идеально для профессиональных геймеров.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <!-- Кнопки навигации -->
+        <button class="slider-nav prev"><img src="assets/icons/slider-left.svg" alt=""></button>
+        <button class="slider-nav next"><img src="assets/icons/slider-right.svg" alt=""></button>
+    
+        <!-- Индикаторы -->
+        <div class="slider-indicators">
+            <span class="indicator active"></span>
+            <span class="indicator"></span>
+            <span class="indicator"></span>
+        </div>
+    </section>
+    <section class="computer-series-title-wrapper">
+        <div class="series-title-wrapper">
+            <p>ПРЕМИАЛЬНЫЕ РЕШЕНИЯ ДЛЯ FHD/4K ГЕЙМИНГА</p>
+            <p class="series-title-caption">АКТУАЛЬНЫЕ СБОРКИ 2025 ГОДА</p>
+        </div>
+    </section>
+    <section class="computer-series-wrapper">
+        <div class="series-part">
+            <img src="assets/Images/goods/pc-1.png" alt="" class="series-part-image">
+            <div class="series-part-title">
+                <p>ИГРОВЫЕ СБОРКИ СЕРИИ <span style="color:#9f0e0e;">STREAM</span></p>
+            </div>
+            <div class="series-part-caption">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris 
+                nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in 
+                reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla 
+                pariatur. 
+            </div>
+            <p class="series-part-price">97 000<span style="color:#9f0e0e;"> ₽</span></p>
+            <div class="button-container">
+                <button class="computer-series-part-button">
+                    Подробнее о сборке
+                </button>
+            </div>
+        </div>
+        <div class="series-part">
+            <img src="assets/Images/goods/pc-1.png" alt="" class="series-part-image">
+            <div class="series-part-title">
+                <p>ИГРОВЫЕ СБОРКИ СЕРИИ <span style="color:#9f0e0e;">STREAM</span></p>
+            </div>
+            <div class="series-part-caption">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris 
+                nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in 
+                reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla 
+                pariatur. 
+            </div>
+            <p class="series-part-price">97 000<span style="color:#9f0e0e;"> ₽</span></p>
+            <div class="button-container">
+                <button class="computer-series-part-button">
+                    Подробнее о сборке
+                </button>
+            </div>
+        </div>
+        <div class="series-part">
+            <img src="assets/Images/goods/pc-1.png" alt="" class="series-part-image">
+            <div class="series-part-title">
+                <p>ИГРОВЫЕ СБОРКИ СЕРИИ <span style="color:#9f0e0e;">STREAM</span></p>
+            </div>
+            <div class="series-part-caption">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris 
+                nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in 
+                reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla 
+                pariatur. 
+            </div>
+            <p class="series-part-price">97 000<span style="color:#9f0e0e;"> ₽</span></p>
+            <div class="button-container">
+                <button class="computer-series-part-button">
+                    Подробнее о сборке
+                </button>
+            </div>
+        </div>
+        <div class="series-part">
+            <img src="assets/Images/goods/pc-1.png" alt="" class="series-part-image">
+            <div class="series-part-title">
+                <p>ИГРОВЫЕ СБОРКИ СЕРИИ <span style="color:#9f0e0e;">STREAM</span></p>
+            </div>
+            <div class="series-part-caption">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris 
+                nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in 
+                reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla 
+                pariatur. 
+            </div>
+            <p class="series-part-price">97 000<span style="color:#9f0e0e;"> ₽</span></p>
+            <div class="button-container">
+                <button class="computer-series-part-button">
+                    Подробнее о сборке
+                </button>
+            </div>
+        </div>
+    </section>
+    <section class="second-slider-wrapper">
+        <div class="slider-content">
+            <div class="slider-images">
+                <div class="slide active">
+                    <img src="assets/Images/banners/secon-slider-1.png" alt="Slide 1">
+                </div>
+                <div class="slide">
+                    <img src="assets/Images/banners/secon-slider-2.png" alt="Slide 2">
+                </div>
+                <div class="slide">
+                    <img src="assets/Images/banners/secon-slider-3.png" alt="Slide 3">
+                </div>
+            </div>
+        </div>
+        <button class="slider-nav prev"><img src="assets/icons/slider-left.svg" alt=""></button>
+        <button class="slider-nav next"><img src="assets/icons/slider-right.svg" alt=""></button>
+
+    </section>
+    <section class="configurator-banner-wrapper">
+        <img src="assets/Images/banners/configurator-banner-back.png" alt="" class="configurator-banner-back">
+        <div class="configurator-banner-container">
+            <div class="configurator-banner-left-part">
+                <h1 class="configurator-banner-title">
+                    НАШ КОНФИГУРАТОР С ПРОВЕРКОЙ <br>СОВМЕСТИМОСТИ ПОМОЖЕТ ВАМ <br>СОБРАТЬ КОМПЬЮТЕР САМОСТОЯТЕЛЬНО!
+                </h1>
+                <button class="configurator-banner-button">
+                    Перейти в конфигуратор
+                </button>
+            </div>
+            <img src="assets/Images/banners/configurator-banner-pc.png" alt="" class="configurator-banner-pc">
+        </div>
+    </section>
+    <section class="advantages-banner-wrapper">
+        <!-- <img src="assets/Images/banners/why-we-banner.png" alt="" class="advantages-banner-image"> -->
+        <div class="advantages-container">
+            <h2 class="advantages-title">Почему мы?</h2>
+            <div class="advantages-flex">
+                <div class="advantage-item">
+                    <img src="assets/icons/advantage-shipping-icon.svg" alt="" class="advantage-image">
+                    <p class="advantage-title">Доставка<br>по всей России</p>
+                    <p class="advantage-caption">Самовывоз, курьерская доставка по Москве<br>
+                        и Подмосковью, транспортными компаниями по России.</p>
+                </div>
+                <div class="advantage-item">
+                    <img src="assets/icons/advantage-guarantee-icon.svg" alt="" class="advantage-image">
+                    <p class="advantage-title">Надежная<br>гарантия</p>
+                    <p class="advantage-caption">Гарантия до 3-х лет, консультация онлайн <br>в течение 3-х лет.</p>
+                </div>
+                <div class="advantage-item">
+                    <img src="assets/icons/advantage-parts-icon.svg" alt="" class="advantage-image">
+                    <p class="advantage-title">Лучшие<br>комплектующие</p>
+                    <p class="advantage-caption">Используем сертифицированные комплектующие от проверенных и надежных брендов.</p>
+                </div>
+                <div class="advantage-item">
+                    <img src="assets/icons/advantage-money-icon.svg" alt="" class="advantage-image">
+                    <p class="advantage-title">Удобная<br>оплата</p>
+                    <p class="advantage-caption">Наличными или картой в пункте самовывоза, картой онлайн, частями или в кредит.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="news-wrapper">
+        <h2 class="news-title">Новости</h2>
+        <div class="news-container">
+            <div class="news-item">
+                <img src="assets/Images/news-preview.png" alt="" class="news-image">
+                <p class="news-caption">Гонконгский производитель Galax представила модули памяти DDR5 HOF Pro</p>
+                <div class="news-info">
+                    <p class="news-source">Источник: 3dnews.ru</p>
+                    <p class="news-date">28.01.25</p>
+                </div>
+            </div>
+            <div class="news-item">
+                <img src="assets/Images/news-preview.png" alt="" class="news-image">
+                <p class="news-caption">Гонконгский производитель Galax представила модули памяти DDR5 HOF Pro</p>
+                <div class="news-info">
+                    <p class="news-source">Источник: 3dnews.ru</p>
+                    <p class="news-date">28.01.25</p>
+                </div>
+            </div>
+            <div class="news-item">
+                <img src="assets/Images/news-preview.png" alt="" class="news-image">
+                <p class="news-caption">Гонконгский производитель Galax представила модули памяти DDR5 HOF Pro</p>
+                <div class="news-info">
+                    <p class="news-source">Источник: 3dnews.ru</p>
+                    <p class="news-date">28.01.25</p>
+                </div>
+            </div>
+            <div class="news-item">
+                <img src="assets/Images/news-preview.png" alt="" class="news-image">
+                <p class="news-caption">Гонконгский производитель Galax представила модули памяти DDR5 HOF Pro</p>
+                <div class="news-info">
+                    <p class="news-source">Источник: 3dnews.ru</p>
+                    <p class="news-date">28.01.25</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="footer-wrapper">
+        <div class="footer-content">
+            <div class="footer-left-part">
+                <img src="assets/icons/main-logo.svg" alt="" class="footer-logo">
+                <p class="subscribe">Подписывайтесь на нас в социальных сетях:</p>
+                <div class="footer-icons">
+                    <button class="header-connect-button footer-button">
+                        <svg class="header-connect-icon" width="31" height="31" viewBox="0 0 31 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <ellipse cx="15.64" cy="15.64" rx="15.64" ry="15.64" fill="#9F0E0E"/>
+                            <path d="M11.11 7.29H20.6C22.69 7.29 24.39 8.98 24.39 11.08V20.56C24.39 22.65 22.69 24.35 20.6 24.35H11.11C9.02 24.35 7.32 22.65 7.32 20.56V11.08C7.32 8.98 9.02 7.29 11.11 7.29ZM22 10.6C22 11.13 21.58 11.55 21.05 11.55C20.53 11.55 20.11 11.13 20.11 10.6C20.11 10.08 20.53 9.66 21.05 9.66C21.58 9.66 22 10.08 22 10.6ZM19.65 15.82C19.65 17.91 17.95 19.61 15.85 19.61C13.76 19.61 12.06 17.91 12.06 15.82C12.06 13.72 13.76 12.03 15.85 12.03C17.95 12.03 19.65 13.72 19.65 15.82Z" fill="white" fill-rule="evenodd"/>
+                          </svg>
+                    </button>
+                    <button class="header-connect-button footer-button">
+                        <svg class="header-connect-icon" width="31" height="31" viewBox="0 0 31 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <ellipse cx="15.64" cy="15.64" rx="15.64" ry="15.64" fill="#9F0E0E"/>
+                          <path d="M22.38 7.44S24.12 6.72 23.97 8.47C23.93 9.2 23.49 11.72 23.15 14.46L22 22.56S21.9 23.75 21.03 23.95C20.16 24.16 18.86 23.23 18.62 23.02C18.43 22.87 15 20.55 13.8 19.41C13.46 19.1 13.07 18.48 13.84 17.76L18.91 12.6C19.49 11.98 20.07 10.54 17.65 12.29L10.9 17.19S10.13 17.71 8.68 17.25L5.55 16.21S4.39 15.44 6.37 14.67C11.19 12.24 17.12 9.76 22.38 7.44Z" fill="white"/>
+                        </svg>
+                    </button>
+                    <button class="header-connect-button footer-button">
+                        <svg class="header-connect-icon" width="31" height="31" viewBox="0 0 31 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <ellipse cx="15.64" cy="15.64" rx="15.64" ry="15.64" fill="#9F0E0E"/>
+                            <path d="M25.16 19.01C24.71 18.47 24.19 17.98 23.69 17.51C23.51 17.34 23.33 17.17 23.15 16.99C22.65 16.5 22.63 16.31 23.03 15.75C23.31 15.36 23.6 14.97 23.89 14.59C24.15 14.25 24.41 13.9 24.67 13.54L24.72 13.47C25.21 12.79 25.72 12.09 25.99 11.24C26.06 11.02 26.13 10.69 25.96 10.42C25.8 10.14 25.47 10.06 25.24 10.02C25.13 10 25.01 10 24.91 10L21.7 10L21.67 10C21.19 10 20.86 10.23 20.67 10.7C20.49 11.15 20.3 11.62 20.07 12.08C19.63 12.99 19.06 14.03 18.24 14.9L18.2 14.94C18.11 15.04 18 15.16 17.92 15.16C17.91 15.16 17.89 15.16 17.88 15.15C17.71 15.09 17.59 14.68 17.6 14.48C17.6 14.48 17.6 14.48 17.6 14.48L17.6 10.77C17.6 10.75 17.59 10.74 17.59 10.73C17.51 10.12 17.33 9.75 16.65 9.62C16.63 9.61 16.61 9.61 16.59 9.61L13.25 9.61C12.71 9.61 12.41 9.83 12.13 10.16C12.05 10.25 11.9 10.43 11.97 10.66C12.05 10.88 12.31 10.93 12.4 10.95C12.81 11.03 13.05 11.28 13.12 11.73C13.23 12.5 13.25 13.33 13.16 14.33C13.14 14.61 13.09 14.83 13.01 15.01C12.99 15.05 12.93 15.19 12.86 15.19C12.84 15.19 12.78 15.18 12.67 15.11C12.41 14.93 12.23 14.68 12 14.37C11.25 13.3 10.62 12.13 10.08 10.79C9.87 10.29 9.5 10.02 9.01 10.01C8.48 10 8 10 7.54 10C7.03 10 6.57 10 6.11 10.01C5.72 10.02 5.45 10.13 5.31 10.36C5.17 10.58 5.18 10.88 5.34 11.23C6.62 14.09 7.79 16.16 9.11 17.96C10.04 19.22 10.97 20.09 12.05 20.71C13.18 21.35 14.44 21.67 15.92 21.67C16.08 21.67 16.26 21.66 16.43 21.66C17.29 21.61 17.6 21.3 17.64 20.47C17.66 20.04 17.71 19.6 17.92 19.21C18.05 18.97 18.18 18.97 18.22 18.97C18.29 18.97 18.39 19.01 18.5 19.08C18.68 19.2 18.84 19.36 18.97 19.5C19.1 19.64 19.22 19.78 19.34 19.91C19.6 20.21 19.88 20.51 20.16 20.8C20.78 21.44 21.47 21.72 22.26 21.66L25.2 21.66C25.21 21.66 25.21 21.66 25.22 21.65C25.51 21.64 25.77 21.47 25.92 21.21C26.1 20.88 26.1 20.46 25.91 20.09C25.69 19.67 25.41 19.31 25.16 19.01Z" fill="white"/>
+                          </svg>
+                    </button>
+                </div>
+            </div>
+            <div class="footer-right-part">
+                <ul class="footer-info">Разделы:
+                    <li class="info-row"><a href="">Игровые компьютеры</a></li>
+                    <li class="info-row"><a href="">Ноутбуки</a></li>
+                    <li class="info-row"><a href="">Мониторы</a></li>
+                    <li class="info-row"><a href="">Комплетующие</a></li>
+                    <li class="info-row"><a href="">Периферия</a></li>
+                </ul>
+                <ul class="footer-info">Информация:
+                    <li class="info-row"><a href="">Оплата и доставка</a></li>
+                    <li class="info-row"><a href="">Контакты</a></li>
+                    <li class="info-row"><a href="">Гарантия</a></li>
+                    <li class="info-row"><a href="">Политика конфиденциальности</a></li>
+                    <li class="info-row"><a href="">О компании</a></li>
+                </ul>
+                <ul class="footer-info">Контакты и адрес:
+                    <li class="info-row info-3">+7 (999) 999-99-99</li>
+                    <li class="info-row info-3">+7 (888) 888-88-88</li>
+                    <li class="info-row info-3">г. Челябинск, <br>ул. Местонахожденческая,д. 3, <br>1 эт., офис 123 </li>
+                </ul>
+            </div>
+        </div>
+        <p class="footer-warning">Все права защищены. Компьютерный интернет магазин LEVELPC.ru 2024 г. Пользовательское соглашение и политика конфиденциальности. Данный интернет-сайт носит исключительно информационный характер и ни при каких условиях не является публичной офертой, определяемой положениями Статьи 437 п.2 Гражданского кодекса Российской Федерации. Для получения подробной информации о технических характеристиках и стоимости указанных товаров и (или) услуг, пожалуйста, обращайтесь к менеджерам магазина.</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
