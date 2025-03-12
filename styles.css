@@ -1125,6 +1125,9 @@ a{
         display: flex;
         margin-left: 6px;
     }
+    .burger-menu-container .header-nav-button{
+        width: 200px;
+    }
     .header-logo{
         position: absolute;
         width: 100px;
@@ -1177,8 +1180,18 @@ a{
         width: 10px;
         height: 10px;
     }
-    .slide img
-    {
-
+    .computer-series-title-wrapper{
+        margin-top: 20px;
+    }
+    .series-title-caption{
+        font-size: 14pt;
+    }
+    .computer-series-wrapper{
+        margin-top: 20px;
+        max-width: 748px;
+        flex-direction: column;
+    }
+    .series-part{
+        max-width: 90%;
     }
 }

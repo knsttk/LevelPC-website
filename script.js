@@ -27,9 +27,21 @@ document.addEventListener("DOMContentLoaded", function () {
     mainCatalogueButton.addEventListener("click", function (event) {
         if (isMobile()) {
             window.location.href = "/catalogue.html";
-        } else {
+        }
+        else {
             event.preventDefault();
             positionCatalogue(mainCatalogueButton, false);
+            showCatalogueMenu();
+        }
+    });
+    
+    burgerCatalogueButton.addEventListener("click", function (event) {
+        if (isMobile()) {
+            window.location.href = "/catalogue.html";
+        }
+        else {
+            event.preventDefault();
+            positionCatalogue(burgerCatalogueButton, true);
             showCatalogueMenu();
         }
     });
@@ -98,6 +110,7 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 });
+
 document.addEventListener('DOMContentLoaded', function() {
     // Выбираем все слайдеры
     const sliders = document.querySelectorAll('.slider-wrapper');
