@@ -1154,17 +1154,24 @@ a{
         gap: 10px;
     }
     .slider-title{
-        top: 20px;
+        box-shadow: 0px 200px 43px -50px rgba(0, 0, 0, 0.5) inset;
+        top: 125px;
         text-align: center;
-        left: 50%;
-        transform: translateX(-50%);
-        width: 250px;
+        left: 0;
+        width: auto;
+        padding-left: 30px;
+        padding-right: 30px;
+        height: 250px;
     }
     .slider-title h1{
-        font-size: 30px;
+        font-size: 30pt;
+        width: 300px;
+        margin-left: auto;
+        margin-right: auto;
     }
     .slider-title p{
-        font-size: 10px;
+        font-size: 10pt;
+        font-weight: bold;
     }
     .indicator{
         width: 10px;
