@@ -940,7 +940,7 @@ a{
         max-width: 300px;
     }
     .footer-content{
-        max-width: 1100px;
+        max-width: 1400px;
         justify-content: space-between;
     }
 }
@@ -960,12 +960,8 @@ a{
     .header-more-button{
         display: flex;
     }
-}
-@media (max-width: 1600px) {
-    
     .footer-content{
-        max-width: 1500px;
-        justify-content: space-between;
+        max-width: 1200px;
     }
 }
 @media (max-width: 1300px) {
@@ -1016,7 +1012,6 @@ a{
     }
     .footer-left-part{
         max-width: 800px;
-        width: 100%;
         flex-direction: row;
         margin-right: 0;
         justify-content: space-around;
@@ -1203,11 +1198,7 @@ a{
         height: 30px;
     }
     .advantages-banner-wrapper{
-        background-repeat: no-repeat;
-        background-size: cover;
-    }
-    .footer-left-part{
-        display: none;
+        background-image: none;
     }
     .configurator-banner-wrapper{
         margin-top: 20px;
@@ -1226,9 +1217,10 @@ a{
         height: 100%;
     }
     .configurator-banner-left-part{
-        margin-left: auto;
-        margin-right: auto;
         align-items: center;
+        margin-left: 10px;
+        margin-right: 10px;
+        margin-top: 30px;
     }
     .configurator-banner-title{
         text-align: center;
@@ -1238,8 +1230,38 @@ a{
     }
     .configurator-banner-button{
         width: 300px;
-        height: 30px;
+        height: 50px;
         font-size: 14pt;
     }
-    
+    .advantages-banner-wrapper{
+        margin-top: 20px;
+    }
+    .news-wrapper{
+        margin-top: 20px;
+    }
+    .news-container{
+        max-width: 748px;
+    }
+    .footer-wrapper{
+        margin-top: 20px;
+    }
+    .footer-content{
+        margin-top: 20px;
+    }
+    .footer-left-part{
+        flex-direction: column;
+        max-width: 300px;
+        gap: 20px;
+    }
+    .footer-logo{
+        max-width: 300px;
+        width: 300px;
+    }
+    .footer-icons{
+        width: 220px;
+    }
+    .footer-right-part{
+        max-width: 300px;
+        gap: 20px;
+    }
 }
