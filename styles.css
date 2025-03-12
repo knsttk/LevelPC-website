@@ -121,7 +121,6 @@ a{
 }
 .header-left-part{
     max-width: 963px;
-    width: 100%;
     display: flex;
     justify-content: flex-start;
 }
@@ -211,10 +210,17 @@ a{
 }
 .header-functional-buttons{
     max-width: 94px;
-    width: 100%;
     display: flex;
     gap: 10px;
     margin-top: 3px;
+    
+}
+.header-functional-buttons button{
+    background: none;
+    padding: 0;
+    margin: 0;
+    border:0;
+    
 }
 .header-funcbutton-icon{
     height: 24px;
@@ -733,7 +739,6 @@ a{
 .advantages-banner-wrapper{
     margin-top: 50px;
     width: 100%;
-    height: 600px;
     background-image: url('assets/Images/banners/why-we-banner.png');
     background-position: center;
 }
@@ -745,8 +750,8 @@ a{
 }
 .advantages-container{
     max-width: 1600px;
-    max-height: 311px;
-    padding-top: 8vw;
+    padding-top: 30px;
+    padding-bottom: 30px;
     margin-left: auto;
     margin-right: auto;
 }
@@ -774,7 +779,8 @@ a{
     max-width: 20%; /* Минимальная ширина элемента */
 }
 .advantage-image {
-    max-height: 88px;
+    width: 100px;
+    height: 80px;
 }
 
 .advantage-title {
@@ -864,6 +870,7 @@ a{
     display: flex;
     justify-content: flex-start;
     flex-wrap: wrap;
+    margin-bottom: 20px;
 }
 .footer-left-part{
     max-width: 230px;
@@ -914,8 +921,6 @@ a{
 }
 .footer-warning{
     font-size: 10px;
-    margin-top: 20px;
-    max-width: 1000px;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 20px;
@@ -938,7 +943,13 @@ a{
 }
 @media (max-width: 1436px) {
     .news-container{
-        max-width: 800px;
+        max-width: 1300px;
+    }
+    .news-item{
+        max-width: 250px;
+    }
+    .news-image{
+        max-width: 250px;
     }
     .first-about-button, .first-contacts-button, .first-guarantee-button{
         display: none;
@@ -954,7 +965,7 @@ a{
         justify-content: space-between;
     }
 }
-@media (max-width: 1200px) {
+@media (max-width: 1300px) {
     .header-nav-wrapper{
         justify-content: flex-start;
         gap: 5px;
@@ -968,16 +979,16 @@ a{
         margin-right: 5px;
     }
     .computer-series-wrapper{
-        max-width: 800px;
+        max-width: 1100px;
     }
     .series-part{
-        max-width: 40%;
+        max-width: 20%;
     }
     .configurator-banner-left-part{
         margin-left: 50px;
     }
     .advantages-flex{
-        max-width: 800px;
+        max-width: 1100px;
         margin-left: auto;
         margin-right: auto;
     }
@@ -985,9 +996,15 @@ a{
         max-width: 90px;
     }
     .news-container{
-        max-width: 800px;
+        max-width: 1100px;
         margin-left: auto;
         margin-right: auto;
+    }
+    .news-item {
+        max-width: 220px;
+    }
+    .news-image{
+        max-width: 220px;
     }
     .footer-content{
         flex-direction: column;
@@ -1019,9 +1036,89 @@ a{
     .header-nav-wrapper{
         display: none;
     }
+    .computer-series-wrapper{
+        max-width: 800px;
+    }
+    .series-part{
+        max-width: 40%;
+    }
+    .news-container{
+        max-width: 800px;
+    }
+    .news-item{
+        max-width: 345px;
+    }
+    .news-image{
+        max-width: 345px;
+    }
+    .advantages-flex{
+        max-width: 800px;
+    }
+    .advantage-item{
+        max-width: 345px;
+    }
 }
-@media (max-width: 380px) {
+@media (max-width: 767px) {
+    body{
+        min-width: 320px;
+    }
     .header-wrapper{
+        height: 111px;
+    }
+    .header-body{
+        padding-left: 10px;
+        padding-right: 10px;
+        padding-top: 10px;
+    }
+    .header-connect-buttons{
         display: none;
+    }
+    .header-functional-buttons{
+        margin-top: 0;
+        justify-content: flex-end;
+    }
+    .header-functional-buttons button{
+        width: 20px;
+        height: 20px;
+    }
+    .header-functional-buttons img{
+        width: 20px;
+        height: 20px;
+        gap: 8px;
+        width: auto;
+    }
+    .header-right-part{
+        height: 70px;
+        margin-top: 10px;
+        margin-left: 0;
+    }
+    .header-search{
+        position: absolute;
+        width: 300px;
+        height: 30px;
+        left: 50%;
+        transform: translate(-50%);
+        margin-top: 40px;
+    }
+    .burger-menu-button{
+        order: -1;
+        padding-top: 10px;
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .burger-menu-button img{
+        width: 20px;
+    }
+    .burger-menu-button p{
+        display: none;
+    }
+    .header-logo{
+        position: absolute;
+        width: 100px;
+        height: 24px;
+        margin-right: 0;
+        margin-top: 10px;
+        left: 50%;
+        transform: translateX(-50%);
     }
 }
