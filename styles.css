@@ -1067,6 +1067,7 @@ a{
     }
     .header-wrapper{
         height: 110px;
+        position: static;
     }
     .header-body{
         padding-left: 10px;
@@ -1138,7 +1139,7 @@ a{
         transform: translateX(-50%);
     }
     .slider-wrapper{
-        padding-top: 110px;
+        padding-top: 0px;
         height: 325px;
         height: 100%;
     }
@@ -1182,6 +1183,9 @@ a{
     }
     .computer-series-title-wrapper{
         margin-top: 20px;
+        margin-left: 10px;
+        margin-right: 10px;
+        width: fit-content;
     }
     .series-title-caption{
         font-size: 14pt;
@@ -1193,5 +1197,13 @@ a{
     }
     .series-part{
         max-width: 90%;
+    }
+    .computer-series-part-button{
+        font-size: 14px;
+        height: 30px;
+    }
+    .advantages-banner-wrapper{
+        background-repeat: no-repeat;
+        background-size: cover;
     }
 }
