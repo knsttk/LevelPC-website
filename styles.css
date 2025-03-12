@@ -1022,8 +1022,7 @@ a{
         padding-top: 15px;
     }
     .footer-icons{
-        max-width: 200px;
-        width: 100%;
+        gap: 10px;
     }
     
 }
