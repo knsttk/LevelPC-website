@@ -34,16 +34,6 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
     
-    burgerCatalogueButton.addEventListener("click", function (event) {
-        if (isMobile()) {
-            window.location.href = "/catalogue.html";
-        } else {
-            event.preventDefault();
-            positionCatalogue(burgerCatalogueButton, true);
-            showCatalogueMenu();
-        }
-    });
-    
     mainCatalogueButton.addEventListener("mouseenter", function () {
         if (!isMobile()) {
             positionCatalogue(mainCatalogueButton, false);
@@ -63,7 +53,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
     
-    document.addEventListener("click", function (event) {
+    document.addEventListener("mouseleave", function (event) {
         if (!catalogueMenu.contains(event.target) && !mainCatalogueButton.contains(event.target) && !burgerCatalogueButton.contains(event.target)) {
             hideCatalogueMenu();
         }
@@ -312,4 +302,40 @@ document.addEventListener("DOMContentLoaded", function() {
             hideCatalogueMenu();
         }
     });
+});
+document.addEventListener("DOMContentLoaded", function () {
+    const slider = document.querySelector(".slider-images"); // Контейнер слайдов
+    let startX = 0;
+    let endX = 0;
+    
+    if (!slider) return;
+
+    // Обработчик начала свайпа
+    slider.addEventListener("touchstart", function (event) {
+        startX = event.touches[0].clientX;
+    });
+
+    // Обработчик движения пальца
+    slider.addEventListener("touchmove", function (event) {
+        endX = event.touches[0].clientX;
+    });
+
+    // Обработчик завершения свайпа
+    slider.addEventListener("touchend", function () {
+        const swipeThreshold = 50; // Минимальная дистанция для свайпа
+
+        if (startX - endX > swipeThreshold) {
+            nextSlide(); // Свайп влево (следующий слайд)
+        } else if (endX - startX > swipeThreshold) {
+            prevSlide(); // Свайп вправо (предыдущий слайд)
+        }
+    });
+
+    function nextSlide() {
+        document.querySelector(".slider-nav.next").click(); // Кликаем кнопку "вперёд"
+    }
+
+    function prevSlide() {
+        document.querySelector(".slider-nav.prev").click(); // Кликаем кнопку "назад"
+    }
 });

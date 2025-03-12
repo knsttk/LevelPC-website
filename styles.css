@@ -84,7 +84,6 @@ a{
     display: none;
 }
 .burger-menu-container button{
-    width: 200px;
     justify-content: flex-start;
 }
 .burger-menu-container .header-logo{
@@ -195,7 +194,6 @@ a{
 }
 .header-connect-buttons{
     max-width: 110px;
-    width: 100%;
     display: flex;
     gap: 5px;
 }
@@ -1125,10 +1123,7 @@ a{
     .burger-menu-container .header-connect-buttons{
         margin-top: 20px;
         display: flex;
-    }
-    .burger-menu-container .header-connect-buttons{
-        margin-top: 20px;
-        display: flex;
+        margin-left: 6px;
     }
     .header-logo{
         position: absolute;
@@ -1138,5 +1133,45 @@ a{
         margin-top: 10px;
         left: 50%;
         transform: translateX(-50%);
+    }
+    .slider-wrapper{
+        padding-top: 110px;
+        height: 325px;
+        height: 100%;
+    }
+    .slider-content{
+        max-height: 325px;
+        height: 100%;
+    }
+    .slider-images{
+        height: 325px;
+    }
+    .slider-nav{
+        display: none;
+    }
+    .slider-indicators{
+        width: 50px;
+        gap: 10px;
+    }
+    .slider-title{
+        top: 20px;
+        text-align: center;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 250px;
+    }
+    .slider-title h1{
+        font-size: 30px;
+    }
+    .slider-title p{
+        font-size: 10px;
+    }
+    .indicator{
+        width: 10px;
+        height: 10px;
+    }
+    .slide img
+    {
+
     }
 }
