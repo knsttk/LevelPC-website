@@ -1233,6 +1233,9 @@ a{
         height: 50px;
         font-size: 14pt;
     }
+    .second-slider-wrapper{
+        display: none;
+    }
     .advantages-banner-wrapper{
         margin-top: 20px;
     }
@@ -1259,6 +1262,10 @@ a{
     }
     .footer-icons{
         width: 220px;
+    }
+    .footer-info{
+        margin-top: 0;
+        margin-bottom: 0;
     }
     .footer-right-part{
         max-width: 300px;
