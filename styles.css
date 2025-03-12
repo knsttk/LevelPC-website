@@ -1206,4 +1206,7 @@ a{
         background-repeat: no-repeat;
         background-size: cover;
     }
+    .footer-left-part{
+        display: none;
+    }
 }
