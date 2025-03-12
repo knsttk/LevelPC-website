@@ -79,6 +79,10 @@ a{
 .burger-menu-container{
     padding-left: 50px;
 }
+.burger-menu-container .header-connect-buttons{
+    margin-top: 20px;
+    display: none;
+}
 .burger-menu-container button{
     width: 200px;
     justify-content: flex-start;
@@ -1113,6 +1117,18 @@ a{
     }
     .burger-menu-button p{
         display: none;
+    }
+    .burger-menu-container .header-logo{
+        position: static;
+        margin-left: 56px;
+    }
+    .burger-menu-container .header-connect-buttons{
+        margin-top: 20px;
+        display: flex;
+    }
+    .burger-menu-container .header-connect-buttons{
+        margin-top: 20px;
+        display: flex;
     }
     .header-logo{
         position: absolute;

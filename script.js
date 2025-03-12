@@ -4,17 +4,19 @@ document.addEventListener("DOMContentLoaded", function () {
     const burgerCatalogueButton = document.querySelector(".burger-catalogue-button");
     const burgerMenu = document.querySelector(".burger-menu-wrapper");
     
+    function isMobile() {
+        return window.innerWidth <= 768; // Проверяем, мобильное ли устройство
+    }
+    
     function positionCatalogue(button, isBurger) {
         const buttonRect = button.getBoundingClientRect();
         
         if (isBurger) {
-            // В бургере каталог должен примыкать к правому краю меню
             catalogueMenu.style.left = `${burgerMenu.getBoundingClientRect().right}px`;
             catalogueMenu.style.top = `${burgerMenu.getBoundingClientRect().top}px`;
             catalogueMenu.style.marginLeft = "0px";
             catalogueMenu.classList.add("burger-active");
         } else {
-            // На полном разрешении каталог позиционируется относительно кнопки "КАТАЛОГ"
             catalogueMenu.style.left = `${buttonRect.left}px`;
             catalogueMenu.style.top = `${buttonRect.bottom}px`;
             catalogueMenu.style.marginLeft = "0px";
@@ -22,9 +24,31 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     }
     
+    mainCatalogueButton.addEventListener("click", function (event) {
+        if (isMobile()) {
+            window.location.href = "/catalogue.html";
+        } else {
+            event.preventDefault();
+            positionCatalogue(mainCatalogueButton, false);
+            showCatalogueMenu();
+        }
+    });
+    
+    burgerCatalogueButton.addEventListener("click", function (event) {
+        if (isMobile()) {
+            window.location.href = "/catalogue.html";
+        } else {
+            event.preventDefault();
+            positionCatalogue(burgerCatalogueButton, true);
+            showCatalogueMenu();
+        }
+    });
+    
     mainCatalogueButton.addEventListener("mouseenter", function () {
-        positionCatalogue(mainCatalogueButton, false);
-        showCatalogueMenu();
+        if (!isMobile()) {
+            positionCatalogue(mainCatalogueButton, false);
+            showCatalogueMenu();
+        }
     });
     
     mainCatalogueButton.addEventListener("mouseleave", function (event) {
@@ -39,15 +63,6 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
     
-    burgerCatalogueButton.addEventListener("click", function () {
-        if (catalogueMenu.classList.contains("burger-active")) {
-            hideCatalogueMenu();
-        } else {
-            positionCatalogue(burgerCatalogueButton, true);
-            showCatalogueMenu();
-        }
-    });
-    
     document.addEventListener("click", function (event) {
         if (!catalogueMenu.contains(event.target) && !mainCatalogueButton.contains(event.target) && !burgerCatalogueButton.contains(event.target)) {
             hideCatalogueMenu();
@@ -59,7 +74,7 @@ document.addEventListener("DOMContentLoaded", function () {
         setTimeout(() => {
             catalogueMenu.style.opacity = "1";
             catalogueMenu.style.visibility = "visible";
-        }, 10); // Небольшая задержка, чтобы исключить конфликт со скрытием
+        }, 10);
     }
     
     function hideCatalogueMenu() {
@@ -82,12 +97,10 @@ document.addEventListener("DOMContentLoaded", function () {
         item.addEventListener("mouseenter", function () {
             const category = item.getAttribute("data-category");
 
-            // Убираем активный класс у всех категорий
             categoryContents.forEach(content => {
                 content.classList.remove("active");
             });
 
-            // Показываем нужную категорию
             const activeCategory = document.getElementById(category);
             if (activeCategory) {
                 activeCategory.classList.add("active");
@@ -95,7 +108,6 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 });
-
 document.addEventListener('DOMContentLoaded', function() {
     // Выбираем все слайдеры
     const sliders = document.querySelectorAll('.slider-wrapper');
