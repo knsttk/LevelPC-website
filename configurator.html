@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Главная | LevelPC</title>
+    <link rel="icon" href="assets/icons/favicon.svg" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+</head>
+<body>
+    <section class="configurator-wrapper">
+        <h2 class="block-title">Конфигуратор</h2>
+        <div class="configurator-container">
+            <div class="your-build-head">
+                <h2 class="block-title">Ваша сборка:</h2>
+                <h2 class="mobile-price-label">144 440 <span style="color:#9f0e0e;">₽</span></h2>
+            </div>
+            <div class="configurator-build-container">
+                <img src="assets/Images/goods/no-pc.png" alt="" class="build-case-image">
+                <div class="build-parts-flex">
+                    <div class="build-part chosen-part">
+                        <div class="part-text">
+                            <p class="build-part-title">Процессор</p>
+                            <p class="build-part-name"><a href="">Intel Core i5-12400F<br>4.8 ГГц, LGA 1700</a></p>
+                            <p class="build-part-price">15 000 <span style="color:#9f0e0e;">₽</span></p>
+                        </div>
+                        <button class="part-replace-button">
+                            <img src="assets/icons/replace-icon.svg" alt="">
+                        </button>
+                        <div class="part-counter">
+                            <button class="part-add">+</button>
+                            <input type="text" class="part-count" placeholder="1">
+                            <button class="part-reduce">-</button>
+                        </div>
+                    </div>
+                    <div class="build-part ready-to-pick" >
+                        <div class="part-text">
+                            <p class="build-part-title">Процессор</p>
+                            <p class="build-part-name"><a href="">Intel Core i5-12400F<br>4.8 ГГц, LGA 1700</a></p>
+                        </div>
+                        <button class="part-replace-button">
+                            <img src="assets/icons/replace-icon.svg" alt="">
+                        </button>
+                        <div class="part-counter">
+                            <button class="part-add">+</button>
+                            <input type="text" class="part-count" placeholder="1">
+                            <button class="part-reduce">-</button>
+                        </div>
+                        <div class="pick-text">
+                            <img src="assets/icons/add-part-icon.svg" alt="" class="add-part-image">
+                            <p class="pick-part-name">Материнская плата</p>
+                        </div>
+                    </div>
+                    <div class="build-part ready-to-pick unavailable-to-pick" >
+                        <div class="part-text">
+                            <p class="build-part-title">Процессор</p>
+                            <p class="build-part-name"><a href="">Intel Core i5-12400F<br>4.8 ГГц, LGA 1700</a></p>
+                        </div>
+                        <button class="part-replace-button">
+                            <img src="assets/icons/replace-icon.svg" alt="">
+                        </button>
+                        <div class="part-counter">
+                            <button class="part-add">+</button>
+                            <input type="text" class="part-count" placeholder="1">
+                            <button class="part-reduce">-</button>
+                        </div>
+                        <div class="pick-text">
+                            <img src="assets/icons/add-part-icon.svg" alt="" class="add-part-image">
+                            <p class="pick-part-name">Видеокарта</p>
+                        </div>
+                    </div>
+                    <div class="build-part ready-to-pick unavailable-to-pick" >
+                        <div class="part-text">
+                            <p class="build-part-title">Процессор</p>
+                            <p class="build-part-name"><a href="">Intel Core i5-12400F<br>4.8 ГГц, LGA 1700</a></p>
+                        </div>
+                        <button class="part-replace-button">
+                            <img src="assets/icons/replace-icon.svg" alt="">
+                        </button>
+                        <div class="part-counter">
+                            <button class="part-add">+</button>
+                            <input type="text" class="part-count" placeholder="1">
+                            <button class="part-reduce">-</button>
+                        </div>
+                        <div class="pick-text">
+                            <img src="assets/icons/add-part-icon.svg" alt="" class="add-part-image">
+                            <p class="pick-part-name">Оперативная память</p>
+                        </div>
+                    </div>
+                    <div class="build-part ready-to-pick unavailable-to-pick" >
+                        <div class="part-text">
+                            <p class="build-part-title">Процессор</p>
+                            <p class="build-part-name"><a href="">Intel Core i5-12400F<br>4.8 ГГц, LGA 1700</a></p>
+                        </div>
+                        <button class="part-replace-button">
+                            <img src="assets/icons/replace-icon.svg" alt="">
+                        </button>
+                        <div class="part-counter">
+                            <button class="part-add">+</button>
+                            <input type="text" class="part-count" placeholder="1">
+                            <button class="part-reduce">-</button>
+                        </div>
+                        <div class="pick-text">
+                            <img src="assets/icons/add-part-icon.svg" alt="" class="add-part-image">
+                            <p class="pick-part-name">Система охлаждения процессора</p>
+                        </div>
+                    </div>
+                    <div class="build-part ready-to-pick unavailable-to-pick" >
+                        <div class="part-text">
+                            <p class="build-part-title">Процессор</p>
+                            <p class="build-part-name"><a href="">Intel Core i5-12400F<br>4.8 ГГц, LGA 1700</a></p>
+                        </div>
+                        <button class="part-replace-button">
+                            <img src="assets/icons/replace-icon.svg" alt="">
+                        </button>
+                        <div class="part-counter">
+                            <button class="part-add">+</button>
+                            <input type="text" class="part-count" placeholder="1">
+                            <button class="part-reduce">-</button>
+                        </div>
+                        <div class="pick-text">
+                            <img src="assets/icons/add-part-icon.svg" alt="" class="add-part-image">
+                            <p class="pick-part-name">Жесткий диск</p>
+                        </div>
+                    </div>
+                    <div class="build-part ready-to-pick unavailable-to-pick" >
+                        <div class="part-text">
+                            <p class="build-part-title">Процессор</p>
+                            <p class="build-part-name"><a href="">Intel Core i5-12400F<br>4.8 ГГц, LGA 1700</a></p>
+                            
+                        </div>
+                        <button class="part-replace-button">
+                            <img src="assets/icons/replace-icon.svg" alt="">
+                        </button>
+                        <div class="part-counter">
+                            <button class="part-add">+</button>
+                            <input type="text" class="part-count" placeholder="1">
+                            <button class="part-reduce">-</button>
+                        </div>
+                        <div class="pick-text">
+                            <img src="assets/icons/add-part-icon.svg" alt="" class="add-part-image">
+                            <p class="pick-part-name">Твердотельный накопитель</p>
+                        </div>
+                    </div>
+                    <div class="build-part ready-to-pick unavailable-to-pick" >
+                        <div class="part-text">
+                            <p class="build-part-title">Процессор</p>
+                            <p class="build-part-name"><a href="">Intel Core i5-12400F<br>4.8 ГГц, LGA 1700</a></p>
+                        </div>
+                        <button class="part-replace-button">
+                            <img src="assets/icons/replace-icon.svg" alt="">
+                        </button>
+                        <div class="part-counter">
+                            <button class="part-add">+</button>
+                            <input type="text" class="part-count" placeholder="1">
+                            <button class="part-reduce">-</button>
+                        </div>
+                        <div class="pick-text">
+                            <img src="assets/icons/add-part-icon.svg" alt="" class="add-part-image">
+                            <p class="pick-part-name">Корпус</p>
+                        </div>
+                    </div>
+                    <div class="build-part ready-to-pick unavailable-to-pick" >
+                        <div class="part-text">
+                            <p class="build-part-title">Процессор</p>
+                            <p class="build-part-name"><a href="">Intel Core i5-12400F<br>4.8 ГГц, LGA 1700</a></p>
+                        </div>
+                        <button class="part-replace-button">
+                            <img src="assets/icons/replace-icon.svg" alt="">
+                        </button>
+                        <div class="part-counter">
+                            <button class="part-add">+</button>
+                            <input type="text" class="part-count" placeholder="1">
+                            <button class="part-reduce">-</button>
+                        </div>
+                        <div class="pick-text">
+                            <img src="assets/icons/add-part-icon.svg" alt="" class="add-part-image">
+                            <p class="pick-part-name">Система охлаждения корпуса</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="configurator-bottom">
+                <h2 class="final-price-label">Итоговая стоимость: 144 440 <span style="color:#9f0e0e;">₽</span></h2>
+                <div class="configurator-bottom-right-part">
+                    <p class="save-information-label">Сохраните информацию сборке:</p>
+                    <div class="save-information">
+                        <button class="save-by-button">e-mail</button>
+                        <button class="save-by-button">Печать</button>
+                        <button class="save-by-button">в PDF</button>
+                    </div>
+                    <button class="build-order-button">
+                        Заказать конфигурацию
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="parts-list-wrapper">
+        <!-- <div class="right-popup-wrapper">
+            <div class="goods-info-container"></div>
+        </div> -->
+        <h2 class="block-title">Материнские платы</h2>
+        <div class="filters-button">
+            <img src="assets/icons/filters-icon.svg" alt="">
+            <p class="filters-title">Фильтры</p>
+        </div>
+        <div class="parts-list-container">
+            <div class="specs-drop-list">
+                <div class="specs-drop-list-main">
+                    <p class="drop-list-title">Производитель</p>
+                    <img src="assets/icons/droplist-arrow-icon.svg" alt="" class="droplist-icon">
+                    <div class="droplist-list">
+                        <div class="droplist-item droplist-item_1">
+                            <p>AsRock</p>
+                            <input type="checkbox" class="droplist-checkbox">
+                        </div>
+                        <div class="droplist-item droplist-item_1">
+                            <p>ColorFul</p>
+                            <input type="checkbox" class="droplist-checkbox">
+                        </div>
+                        <div class="droplist-item droplist-item_1">
+                            <p>GIGABYTE</p>
+                            <input type="checkbox" class="droplist-checkbox">
+                        </div>
+                        <div class="droplist-item droplist-item_1">
+                            <p>MaxSun</p>
+                            <input type="checkbox" class="droplist-checkbox">
+                        </div>
+                        <div class="droplist-item droplist-item_1">
+                            <p>MSI</p>
+                            <input type="checkbox" class="droplist-checkbox">
+                        </div>
+                    </div>
+                </div>
+                <!-- <div class="specs-drop-list-main">
+                    <p class="drop-list-title">Сокет</p>
+                    <img src="assets/icons/droplist-arrow-icon.svg" alt="" class="droplist-icon">
+                    <div class="droplist-list">
+                        <div class="droplist-item droplist-item_1">
+                            <p>AM5</p>
+                            <input type="checkbox" class="droplist-checkbox">
+                        </div>
+                        <div class="droplist-item droplist-item_1">
+                            <p>AM4</p>
+                            <input type="checkbox" class="droplist-checkbox">
+                        </div>
+                        <div class="droplist-item droplist-item_1">
+                            <p>LGA1851</p>
+                            <input type="checkbox" class="droplist-checkbox">
+                        </div>
+                        <div class="droplist-item droplist-item_1">
+                            <p>LGA1700</p>
+                            <input type="checkbox" class="droplist-checkbox">
+                        </div>
+                        <div class="droplist-item droplist-item_1">
+                            <p>LGA1200</p>
+                            <input type="checkbox" class="droplist-checkbox">
+                        </div>
+                    </div>
+                </div> -->
+                <div class="specs-drop-list-main">
+                    <p class="drop-list-title">Тип памяти</p>
+                    <img src="assets/icons/droplist-arrow-icon.svg" alt="" class="droplist-icon">
+                    <div class="droplist-list">
+                        <div class="droplist-item droplist-item_1">
+                            <p>DDR5</p>
+                            <input type="checkbox" class="droplist-checkbox">
+                        </div>
+                        <div class="droplist-item droplist-item_1">
+                            <p>DDR4</p>
+                            <input type="checkbox" class="droplist-checkbox">
+                        </div>
+                    </div>
+                </div>
+                <div class="specs-drop-list-main">
+                    <p class="drop-list-title">Форм-фактор</p>
+                    <img src="assets/icons/droplist-arrow-icon.svg" alt="" class="droplist-icon">
+                    <div class="droplist-list">
+                        <div class="droplist-item droplist-item_1">
+                            <p>E-ATX</p>
+                            <input type="checkbox" class="droplist-checkbox">
+                        </div>
+                        <div class="droplist-item droplist-item_1">
+                            <p>Standard-ATX</p>
+                            <input type="checkbox" class="droplist-checkbox">
+                        </div>
+                        <div class="droplist-item droplist-item_1">
+                            <p>Micro-ATX</p>
+                            <input type="checkbox" class="droplist-checkbox">
+                        </div>
+                        <div class="droplist-item droplist-item_1">
+                            <p>Mini-ATX</p>
+                            <input type="checkbox" class="droplist-checkbox">
+                        </div>
+                    </div>
+                </div>
+                <div class="specs-drop-list-main">
+                    <p class="drop-list-title">Чипсет AMD</p>
+                    <img src="assets/icons/droplist-arrow-icon.svg" alt="" class="droplist-icon">
+                    <div class="droplist-list">
+                        <div class="droplist-item droplist-item_1">
+                            <p>X870</p>
+                            <input type="checkbox" class="droplist-checkbox">
+                        </div>
+                        <div class="droplist-item droplist-item_1">
+                            <p>X870E</p>
+                            <input type="checkbox" class="droplist-checkbox">
+                        </div>
+                        <div class="droplist-item droplist-item_1">
+                            <p>B850</p>
+                            <input type="checkbox" class="droplist-checkbox">
+                        </div>
+                        <div class="droplist-item droplist-item_1">
+                            <p>B840</p>
+                            <input type="checkbox" class="droplist-checkbox">
+                        </div>
+                    </div>
+                </div>
+                <div class="specs-drop-list-main">
+                    <p class="drop-list-title">Чипсет Intel</p>
+                    <img src="assets/icons/droplist-arrow-icon.svg" alt="" class="droplist-icon">
+                    <div class="droplist-list">
+                        <div class="droplist-item droplist-item_1">
+                            <p>Z890</p>
+                            <input type="checkbox" class="droplist-checkbox">
+                        </div>
+                        <div class="droplist-item droplist-item_1">
+                            <p>Z790</p>
+                            <input type="checkbox" class="droplist-checkbox">
+                        </div>
+                        <div class="droplist-item droplist-item_1">
+                            <p>H770</p>
+                            <input type="checkbox" class="droplist-checkbox">
+                        </div>
+                        <div class="droplist-item droplist-item_1">
+                            <p>B760</p>
+                            <input type="checkbox" class="droplist-checkbox">
+                        </div>
+                    </div>
+                </div>
+                <div class="specs-drop-list-main">
+                    <p class="drop-list-title">Количество слотов памяти</p>
+                    <img src="assets/icons/droplist-arrow-icon.svg" alt="" class="droplist-icon">
+                    <div class="droplist-list">
+                        <div class="droplist-item droplist-item_1">
+                            <p>8</p>
+                            <input type="checkbox" class="droplist-checkbox">
+                        </div>
+                        <div class="droplist-item droplist-item_1">
+                            <p>4</p>
+                            <input type="checkbox" class="droplist-checkbox">
+                        </div>
+                        <div class="droplist-item droplist-item_1">
+                            <p>2</p>
+                            <input type="checkbox" class="droplist-checkbox">
+                        </div>
+                    </div>
+                </div>
+                <div class="specs-drop-list-main">
+                    <p class="drop-list-title">Количество разъемов M.2</p>
+                    <img src="assets/icons/droplist-arrow-icon.svg" alt="" class="droplist-icon">
+                    <div class="droplist-list">
+                        <div class="droplist-item droplist-item_1">
+                            <p>3</p>
+                            <input type="checkbox" class="droplist-checkbox">
+                        </div>
+                        <div class="droplist-item droplist-item_1">
+                            <p>2</p>
+                            <input type="checkbox" class="droplist-checkbox">
+                        </div>
+                        <div class="droplist-item droplist-item_1">
+                            <p>1</p>
+                            <input type="checkbox" class="droplist-checkbox">
+                        </div>
+                        <div class="droplist-item droplist-item_1">
+                            <p>0</p>
+                            <input type="checkbox" class="droplist-checkbox">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <input type="search" class="item-search-field" placeholder="Поиск по результатам">
+        </div>
+        <div class="pc-parts-list">
+            <div class="parts-list-item added-item">
+                <img src="assets/Images/goods/motherboard.png" alt="" class="list-item-image">
+                <div class="item-title-and-price">
+                    <p class="item-name">MSI MPG Z790 CARBON MAX WIFI II</p>
+                    <p class="item-price">45 000 <span style="color:#9f0e0e;">₽</span></p>
+                    <div class="item-buttons">
+                        <button class="item-compare">В сравнения</button>
+                        <button class="item-info">Инфо</button>
+                    </div>
+                </div>
+                <button class="add-to-build">
+                    <img src="assets/icons/add-to-build-icon.svg" alt="" class="add-to-build-icon">
+                </button>
+                <div class="item-remove-and-count">
+                    <button class="remove-item-button">
+                        <img src="assets/icons/item-inbuild-icon.svg" alt="">
+                    </button>
+                    <div class="part-counter item-counter">
+                        <button class="part-add">+</button>
+                        <input type="text" class="part-count" placeholder="1">
+                        <button class="part-reduce">-</button>
+                    </div>
+                </div>
+            </div>
+            <div class="parts-list-item">
+                <img src="assets/Images/goods/motherboard.png" alt="" class="list-item-image">
+                <div class="item-title-and-price">
+                    <p class="item-name">MSI MPG Z790 CARBON MAX WIFI II</p>
+                    <p class="item-price">45 000 <span style="color:#9f0e0e;">₽</span></p>
+                    <div class="item-buttons">
+                        <button class="item-compare">В сравнения</button>
+                        <button class="item-info">Инфо</button>
+                    </div>
+                </div>
+                <button class="add-to-build">
+                    <img src="assets/icons/add-to-build-icon.svg" alt="" class="add-to-build-icon">
+                </button>
+                <div class="item-remove-and-count">
+                    <button class="remove-item-button">
+                        <img src="assets/icons/item-inbuild-icon.svg" alt="">
+                    </button>
+                    <div class="part-counter item-counter">
+                        <button class="part-add">+</button>
+                        <input type="text" class="part-count" placeholder="1">
+                        <button class="part-reduce">-</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="script.js"></script>
+</body>
+</html>
