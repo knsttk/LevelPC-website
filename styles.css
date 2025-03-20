@@ -1051,6 +1051,7 @@ a{
     margin-top: auto;
     margin-bottom: auto;
     cursor: pointer;
+    padding: 0;
 }
 .part-replace-button:hover{
     transition: 0.3s;
@@ -1124,6 +1125,7 @@ a{
     border: 0;
     font-size: 16px;
     cursor: pointer;
+    padding: 0;
 }
 .save-by-button:hover{
     background-color: #E08026;
@@ -1140,6 +1142,7 @@ a{
     border: 0;
     font-size: 16px;
     cursor: pointer;
+    padding: 0;
 }
 .build-order-button:hover{
     transition: 0.3s;
@@ -1324,8 +1327,11 @@ a{
     font-size: 14px;
     font-family: Play;
     cursor: pointer;
+    padding: 0;
 }
+
 .item-info{
+    width: 50px;
     background-color: #E08026;
 }
 .item-compare{
@@ -1801,9 +1807,6 @@ a{
     .build-part-name{
         font-size: 14px;
     }
-    .save-by-button{
-        width: 80px;
-    }
     .parts-list-wrapper{
         margin-top: 20px;
         margin-left: 10px;
@@ -1837,7 +1840,7 @@ a{
         justify-content: flex-end;
     }
     .item-buttons button{
-        font-size: 12px;
+        font-size: 14px;
     }
     .item-compare{
         width: 100px;
