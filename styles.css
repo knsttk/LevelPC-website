@@ -1755,8 +1755,7 @@ a{
         background-color: #000;
         flex-wrap: nowrap;
         flex-direction: column;
-        padding-top: 10px;
-        padding-bottom: 10px;
+        padding: 10px;
     }
     .final-price-label{
         display: none;
@@ -1787,12 +1786,22 @@ a{
     }
     .build-part{
         padding-left: 10px;
+        width: 100%;
+    }
+    .chosen-part{
+        gap: 10px;
+    }
+    .part-replace-button{
+        margin-left: auto;
     }
     .build-part-title{
         font-size: 14px;
     }
     .build-part-name{
         font-size: 14px;
+    }
+    .save-by-button{
+        width: 80px;
     }
     .parts-list-wrapper{
         margin-top: 20px;
