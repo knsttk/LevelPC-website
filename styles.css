@@ -1087,6 +1087,7 @@ a{
     padding: 0;
     border: 0;
     font-family: Play;
+    border-radius: 0;
 }
 .part-count:focus{
     outline: 0;
@@ -1812,18 +1813,24 @@ a{
     .parts-list-item{
         max-width: 747px;
         max-height: 142px;
+        width: 100%;
+        gap: 0;
+        justify-content: space-between;
     }
     .list-item-image{
         width: 102px;
     }
     .item-name{
-        font-size: 10px;
+        font-size: 14px;
+    }
+    .item-buttons{
+        justify-content: flex-end;
     }
     .item-buttons button{
-        font-size: 10px;
+        font-size: 12px;
     }
     .item-compare{
-        width: 90px;
+        width: 100px;
     }
     .item-remove-and-count{
         width: 24px;
