@@ -352,3 +352,35 @@ document.addEventListener("DOMContentLoaded", function () {
         document.querySelector(".slider-nav.prev").click(); // Кликаем кнопку "назад"
     }
 });
+document.addEventListener("DOMContentLoaded", function () {
+    const infoButtons = document.querySelectorAll(".item-info"); // Все кнопки "Инфо"
+    const rightPopup = document.querySelector(".right-popup-wrapper"); // Попап
+    const overlayBlur = document.querySelector(".overlay-blur"); // Размытый фон
+
+    // Функция для открытия попапа
+    function openPopup() {
+        rightPopup.classList.add("active");
+        overlayBlur.classList.add("active");
+    }
+
+    // Функция для закрытия попапа
+    function closePopup() {
+        rightPopup.classList.remove("active");
+        overlayBlur.classList.remove("active");
+    }
+
+    // Обработчик для кнопок "Инфо"
+    infoButtons.forEach((button) => {
+        button.addEventListener("click", openPopup);
+    });
+
+    // Закрытие попапа при клике на размытый фон
+    overlayBlur.addEventListener("click", closePopup);
+
+    // Закрытие попапа при нажатии на клавишу Escape
+    document.addEventListener("keydown", function (event) {
+        if (event.key === "Escape") {
+            closePopup();
+        }
+    });
+});

@@ -5,7 +5,9 @@ input[type="search"]::-webkit-search-cancel-button
 {
   -webkit-appearance:none;
 }
-
+button{
+    font-family: Play;
+}
 html{
     margin: 0;
     padding: 0;
@@ -563,7 +565,6 @@ a{
     border: none;
     color: #fff;
     font-size: 14px;
-    font-family: Play;
     font-weight: bold;
     padding: 0;
     margin-top: 10px;
@@ -725,7 +726,7 @@ a{
     color: #fff;
     background-color: #9f0e0e;
     font-size: 2vw; /* Размер текста зависит от ширины экрана */
-    font-family: Play;
+   
     border: 0;
     cursor: pointer;
     margin-bottom: 10px;
@@ -1051,6 +1052,7 @@ a{
     margin-top: auto;
     margin-bottom: auto;
     cursor: pointer;
+    padding: 0;
 }
 .part-replace-button:hover{
     transition: 0.3s;
@@ -1070,6 +1072,7 @@ a{
     background-color: #212121;
     color: #fff;
     cursor: pointer;
+    padding: 0;
 }
 .part-counter button:hover{
     transition: 0.3s;
@@ -1087,6 +1090,7 @@ a{
     padding: 0;
     border: 0;
     font-family: Play;
+    border-radius: 0;
 }
 .part-count:focus{
     outline: 0;
@@ -1096,6 +1100,7 @@ a{
     margin-top: 20px;
     display: flex;
     justify-content: space-between;
+    gap: 10px;
 }
 .configurator-bottom-right-part{
     display: flex;
@@ -1118,10 +1123,10 @@ a{
     background-color: #9f0e0e;
     color: #fff;
     font-weight: bold;
-    font-family: Play;
     border: 0;
     font-size: 16px;
     cursor: pointer;
+    padding: 0;
 }
 .save-by-button:hover{
     background-color: #E08026;
@@ -1134,10 +1139,10 @@ a{
     background-color: #9f0e0e;
     color: #fff;
     font-weight: bold;
-    font-family: Play;
     border: 0;
     font-size: 16px;
     cursor: pointer;
+    padding: 0;
 }
 .build-order-button:hover{
     transition: 0.3s;
@@ -1153,18 +1158,88 @@ a{
     box-sizing: border-box;
     padding: 20px;
 }
-.right-popup-wrapper{
-    display: flex;
-    background-color: #000;
-    width: 500px;
+.overlay-blur {
     position: fixed;
-    z-index: 2;
-    right: 0;
-    height: 100vh;
     top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Полупрозрачный черный фон */
+    backdrop-filter: blur(5px); /* Размытие фона */
+    z-index: 10; /* Убедитесь, что overlay находится над всем контентом */
+    display: none; /* Скрыт по умолчанию */
+}
+.right-popup-wrapper{
+    position: fixed;
+    top: 0;
+    right: -500px; /* Изначально скрыт за пределами экрана */
+    width: 500px;
+    padding: 30px;
+    padding-top: 20px;
+    height: 100vh;
+    background-color: #000;
+    z-index: 11; /* Над overlay */
+    transition: right 0.5s ease-in-out; /* Плавное появление */
+    overflow-y: scroll;
+    box-sizing: border-box;
+}
+.right-popup-wrapper::-webkit-scrollbar {
+    display: none;
+}
+.right-popup-wrapper.active {
+    right: 0; /* Показываем попап */
+    box-shadow: -6px 0px 19px 0px #9f0e0e;
+}
+
+/* Класс для показа overlay */
+.overlay-blur.active {
+    display: block; /* Показываем размытый фон */
+}
+.right-popup-img-container{
+    width: 440px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
 }
 .parts-list-title{
     margin-bottom: 20px;
+}
+.goods-popup-caption{
+    font-size: 16px;
+    color: #9e9e9e;
+    margin-bottom: 20px;
+}
+.specs-popup-block{
+    margin-bottom: 20px;
+}
+.specs-popup-block-name{
+    color: #fff;
+    font-weight: bold;
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+.specs-popup-table{
+    color: #9e9e9e;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #9e9e9e;
+}
+.popup-add-to-build-button{
+    width: 180px;
+    height: 50px;
+    border: 0;
+    background-color: #9f0e0e;
+    cursor: pointer;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    
 }
 .parts-list-container{
 }
@@ -1253,7 +1328,6 @@ a{
 }
 .item-search-field{
     border: 0;
-    font-family: Play;
     color: #fff;
     background-image: url('assets/icons/search-icon.svg');
     background-position: 95%; 
@@ -1313,6 +1387,7 @@ a{
 }
 .item-info, .item-compare{
     height: 30px;
+    width: 100px;
     padding-left: 10px;
     padding-right: 10px;
     border-radius: 0;
@@ -1320,10 +1395,12 @@ a{
     color: #fff;
     font-weight: bold;
     font-size: 14px;
-    font-family: Play;
     cursor: pointer;
+    padding: 0;
 }
+
 .item-info{
+    width: 50px;
     background-color: #E08026;
 }
 .item-compare{
@@ -1754,8 +1831,7 @@ a{
         background-color: #000;
         flex-wrap: nowrap;
         flex-direction: column;
-        padding-top: 10px;
-        padding-bottom: 10px;
+        padding: 10px;
     }
     .final-price-label{
         display: none;
@@ -1786,6 +1862,13 @@ a{
     }
     .build-part{
         padding-left: 10px;
+        width: 100%;
+    }
+    .chosen-part{
+        gap: 10px;
+    }
+    .part-replace-button{
+        margin-left: auto;
     }
     .build-part-title{
         font-size: 14px;
@@ -1812,18 +1895,24 @@ a{
     .parts-list-item{
         max-width: 747px;
         max-height: 142px;
+        width: 100%;
+        gap: 0;
+        justify-content: space-between;
     }
     .list-item-image{
         width: 102px;
     }
     .item-name{
-        font-size: 10px;
+        font-size: 14px;
+    }
+    .item-buttons{
+        justify-content: flex-end;
     }
     .item-buttons button{
-        font-size: 10px;
+        font-size: 14px;
     }
     .item-compare{
-        width: 90px;
+        width: 100px;
     }
     .item-remove-and-count{
         width: 24px;
