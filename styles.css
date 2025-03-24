@@ -7,6 +7,8 @@ input[type="search"]::-webkit-search-cancel-button
 }
 button{
     font-family: Play;
+    border-radius: 0;
+    border:0;
 }
 html{
     margin: 0;
@@ -40,6 +42,9 @@ a{
     text-decoration: none;
     color: #a3a3a3;
 }
+input{
+    font-family: Play;
+}
 .header-wrapper{
     border-bottom: 2px solid #9f0e0e;
     height: 48px;
@@ -53,7 +58,6 @@ a{
     color: #fff;
     border: 0;
     background-color: #000;
-    border-radius: 0;
     height: 48px;
     padding-top: 17px;
     justify-content: space-evenly;
@@ -148,6 +152,11 @@ a{
     justify-content: space-evenly;
     width: fit-content;
     cursor: pointer;
+}
+.header-button-icon
+{
+    width: 15px;
+    height: 15px;
 }
 .header-nav-button:hover{
     transition: 0.3s;
@@ -948,8 +957,14 @@ a{
     justify-content: space-between;
     align-items: center;
     margin-bottom: 20px;
+    flex-wrap: wrap;
+    gap: 10px;
 }
-.mobile-price-label{
+.help-number{
+    color: #9e9e9e;
+    text-align: right;
+}
+.help-number br{
     display: none;
 }
 .your-build-head h2{
@@ -957,6 +972,7 @@ a{
 }
 .configurator-build-container{
     display: flex;
+    gap: 10px;
 }
 .build-case-image{
     max-width: 356px;
@@ -996,6 +1012,12 @@ a{
     font-size: 14px;
     cursor: pointer;
 }
+.part-text{
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
 .ready-to-pick .part-text{
     display: none;
 }
@@ -1024,15 +1046,14 @@ a{
     opacity: 0.5;
 }
 .build-part-title{
-    margin-top: 6.5px;
-    margin-bottom: 5px;
-    font-size: 20px;
+    font-size: 14px;
     font-weight: bold;
 }
 .build-part-name{
-    font-size: 14px;
+    font-size: 18px;
     color: #fff;
     margin-bottom: 5px;
+    margin-top: auto;
 }
 .build-part-name a{
     color: #fff;
@@ -1042,7 +1063,7 @@ a{
 }
 .build-part-price{
     font-weight: bold;
-    font-size: 14px;
+    font-size: 18px;
 }
 .part-replace-button{
     width: 40px;
@@ -1065,7 +1086,6 @@ a{
 .part-counter button{
     width: 25px;
     height: 25px;
-    border-radius: 0;
     border: none;
     font-size: 16px;
     font-weight: bold;
@@ -1090,7 +1110,6 @@ a{
     padding: 0;
     border: 0;
     font-family: Play;
-    border-radius: 0;
 }
 .part-count:focus{
     outline: 0;
@@ -1119,7 +1138,6 @@ a{
 .save-by-button{
     width: 70px;
     height: 40px;
-    border-radius: 0;
     background-color: #9f0e0e;
     color: #fff;
     font-weight: bold;
@@ -1135,16 +1153,18 @@ a{
 .build-order-button{
     width: 240px;
     height: 50px;
-    border-radius: 0;
-    background-color: #9f0e0e;
+    background-color: #9e9e9e;
     color: #fff;
     font-weight: bold;
     border: 0;
     font-size: 16px;
-    cursor: pointer;
     padding: 0;
 }
-.build-order-button:hover{
+.build-order-active-button{
+    cursor: pointer;
+    background-color: #9f0e0e;
+}
+.build-order-active-button:hover{
     transition: 0.3s;
     background-color: #E08026;
 }
@@ -1241,6 +1261,10 @@ a{
     font-weight: bold;
     
 }
+.popup-add-to-build-button:hover{
+    transition: 0.3s;
+    background-color: #E08026;
+}
 .parts-list-container{
 }
 .filters-button{
@@ -1311,6 +1335,10 @@ a{
 {
     display: block;
 }
+.specs-drop-list-main:hover .price-drop-list
+{
+    display: flex;
+}
 .specs-drop-list-main:hover
 {
     border-color: #9f0e0e;
@@ -1323,7 +1351,7 @@ a{
 .droplist-checkbox{
     width: 15px;
     height: 15px;
-    background-color: #fff;
+    accent-color: #9f0e0e;
     margin: 0;
 }
 .item-search-field{
@@ -1340,7 +1368,6 @@ a{
     margin-top: 10px;
 }
 .item-search-field:focus{
-    border-radius: 0;
     outline: 2px solid #9f0e0e;
 }
 .pc-parts-list{
@@ -1390,7 +1417,6 @@ a{
     width: 100px;
     padding-left: 10px;
     padding-right: 10px;
-    border-radius: 0;
     border: 0;
     color: #fff;
     font-weight: bold;
@@ -1413,7 +1439,6 @@ a{
     align-items: center;
     justify-content: space-evenly;
     border: 0;
-    border-radius: 0;
     padding: 0;
     cursor: pointer;
 }
@@ -1447,7 +1472,6 @@ a{
     height: 70px;
     background-color: #9f0e0e;
     border: 0;
-    border-radius: 0;
     padding: 0;
     cursor: pointer;
 }
@@ -1467,6 +1491,225 @@ a{
 .added-item .item-remove-and-count{
     display: block;    
 }
+
+.catalogue-wrapper{
+    max-width: 1600px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+}
+.catalogue-container{
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: stretch;
+}
+.catalogue-card-wrapper{
+    background-color: #131313;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+    cursor: pointer;
+    font-size: 30px;
+    text-align: center;
+    padding: 25px;
+    padding-top: 20px;
+    box-sizing: border-box;
+    color: #fff;
+    aspect-ratio: 1 / 1; /* Соотношение сторон 1:1 (квадрат) */
+    width: 100%; /* Ширина будет регулироваться контейнером */
+    max-width: 385px; 
+}
+.catalogue-card-wrapper:hover{
+    background-color: #222222;
+    transition: 0.3s;
+}
+.search-results-wrapper{
+    max-width: 1600px;
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.search-results-container{
+
+}
+.applied-filters-flex{
+    display: none;
+    margin-bottom: 20px;
+    margin-left: 220px;
+    /* display: flex; */
+    gap: 10px;
+    align-items: center;
+    max-width: 1380px;
+    flex-wrap: wrap;
+}
+.applied-filters-title{
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+}
+.applied-filter{
+    min-width: 100px;
+    height: 30px;
+    display: flex;
+    box-sizing: border-box;
+    padding-left: 8px;
+    padding-right: 8px;
+    justify-content: space-between;
+    gap: 10px;
+    background-color: #131313;
+    align-items: center;
+}
+.applied-filter-name{
+    font-size: 14px;
+    color: #fff;
+}
+.search-results-sorting{
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+    gap: 10px;
+    align-items: center;
+}
+.sort-droplist-item:hover{
+    background-color: #E08026;
+    transition: 0.3s;    
+}
+.search-orientation-button{
+    width: 15px;
+    height: 15px;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    background-color: #000;
+    cursor: pointer;
+}
+.search-results-container{
+    display: flex;
+    gap: 20px;
+}
+.left-filters-wrapper{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.left-filters-title{
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+}
+.filters-block{
+    padding: 10px;
+    background-color: #131313;
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    box-sizing: border-box;
+}
+.filter-title{
+    font-size: 14px;
+    color: #fff;
+}
+.filter-search-field{
+    width: 100%;
+    background-image: none;
+    height: 30px;
+    background-color: #000;
+    padding: 0;
+}
+.filters-table{
+    margin: 0;
+    padding: 0;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.original-checkbox{
+    display: none;
+}
+.checkmark{
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    margin: 0;
+    accent-color: #9f0e0e;
+    width: 20px;
+    height: 20px;
+    background-color: black;
+}
+.custom-checkbox:hover .checkmark {
+    border-color: #E08026; /* Оранжевая рамка при наведении */
+}
+
+/* Стили для состояния "активно" (чекбокс отмечен) */
+.custom-checkbox input[type="checkbox"]:checked + .checkmark {
+    background-color: #9f0e0e; /* Красный фон при активации */
+    border-color: #9f0e0e; /* Красная рамка при активации */
+}
+
+/* Галочка внутри чекбокса */
+.custom-checkbox .checkmark::after {
+    content: "";
+    position: absolute;
+    display: none;
+    left: 6px;
+    top: 2px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+}
+
+/* Показываем галочку, если чекбокс отмечен */
+.custom-checkbox input[type="checkbox"]:checked + .checkmark::after {
+    display: block;
+}
+.filter-in-table{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.filter-price-inputs{
+    display: flex;
+    gap: 6px;
+}
+.filter-price-input{
+    width: 87px;
+    border: 0;
+    padding: 0;
+    background-color: #000;
+    color: #fff;
+    height: 30px;
+    text-indent: 5px;
+}
+.filter-price-input:focus{
+    outline: 0;
+}
+.mobile-filters-wrapper{
+    display: none;
+}
+.price-drop-list{
+    gap: 10px;
+    flex-direction: column;
+    padding: 10px;
+    box-sizing: border-box;
+}
+.price-drop-list input{
+    height: 30px;
+    width: 100%;
+    border-radius: 0;
+    border: 0;
+    background-color: #131313;
+}
+.price-drop-list input:focus{
+    outline: 2px solid #9f0e0e;
+}
 @media (max-width: 1616px) {
     .news-container{
         max-width: 1450px;
@@ -1484,6 +1727,9 @@ a{
     .configurator-wrapper, .parts-list-wrapper{
         margin-left: 50px;
         margin-right: 50px;
+    }
+    .catalogue-wrapper{
+        max-width: 1200px;
     }
 }
 @media (max-width: 1436px) {
@@ -1569,6 +1815,20 @@ a{
     .configurator-bottom{
         flex-wrap: wrap;
     }
+    .catalogue-wrapper{
+        max-width: 1180px;
+        margin-top: 20px;
+    }
+    .catalogue-container{
+        gap: 10px;
+    }
+    .catalogue-card-wrapper{
+        max-width: 280px;
+        font-size: 20px;
+    }
+    .catalogue-card-wrapper img{
+        width: 90%;
+    }
 }
 @media (max-width: 1120px) {
     .burger-menu-button{
@@ -1597,6 +1857,20 @@ a{
     }
     .advantage-item{
         max-width: 345px;
+    }
+    .catalogue-wrapper{
+        max-width: 1000px;
+        margin-top: 20px;
+    }
+    .catalogue-container{
+        gap: 10px;
+    }
+    .catalogue-card-wrapper{
+        max-width: 200px;
+        font-size: 12px;
+    }
+    .catalogue-card-wrapper img{
+        width: 90%;
     }
 }
 
@@ -1824,6 +2098,13 @@ a{
         flex-direction: column;
         align-items: center;
     }
+    .help-number{
+        max-width: 405px;
+        margin-left: auto;
+    }
+    .help-number br{
+        display: block;
+    }
     .build-parts-flex{
         padding-right: 0;
         align-items: center;
@@ -1874,7 +2155,18 @@ a{
         font-size: 14px;
     }
     .build-part-name{
+        font-size: 18px;
+    }
+    .configurator-bottom-right-part{
+        gap: 10px;
+    }
+    .save-by-button{
+        width: 50px;
         font-size: 14px;
+        height: 30px;
+    }
+    .build-order-button{
+        width: 220px;
     }
     .parts-list-wrapper{
         margin-top: 20px;
@@ -1891,6 +2183,26 @@ a{
     }
     .filters-button{
         display: flex;
+    }
+    .mobile-filters-wrapper{
+        background-color: #000;
+        width: 100%;
+        height: 100vh;
+        position: fixed;
+        box-sizing: border-box;
+        padding: 20px;
+        top: 0;
+        z-index: 2;
+        left: 0;
+        transition: left 0.3s ease-in-out;
+    }
+    
+    .exit-filter-popup{
+        width: 24px;
+        height: 24px;
+        padding: 0;
+        background-color: #000;
+        cursor: pointer;
     }
     .parts-list-item{
         max-width: 747px;
@@ -1939,6 +2251,52 @@ a{
     .specs-drop-list{
         display: none;
     }
+    .mobile-filters-container{
+        display: flex;
+        flex-direction: column;
+    }
+    .mobile-filters-title{
+        font-size: 16px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        color: #fff;
+        font-weight: bold;
+    }
+    .mobile-drop-list-main{
+        width: 100%;
+    }
+    .mobile-filters-bottom{
+        width: 100%;
+        height: 80px;
+        position: fixed;
+        bottom: 0;
+        background-color: #131313;
+        left: 0;
+        box-sizing: border-box;
+        padding: 10px;
+    }
+    .mobile-filters-buttons{
+        display: flex;
+        margin-left: auto;
+        margin-right: auto;
+        gap: 10px;
+        max-width: 707px;
+        justify-content: center;
+    }
+    .apply-filters-button{
+        height: 50px;
+        background-color: #9f0e0e;
+        color: #fff;
+        font-weight: bold;
+        width: 100%;
+    }
+    .cancel-filters-button{
+        height: 50px;
+        background-color: #E08026;
+        color: #fff;
+        font-weight: bold;
+        width: 70%;
+    }
     .block-title{
         font-size: 20px;
         width: fit-content;
@@ -1948,5 +2306,25 @@ a{
         max-width: 700px;
         width: 100%;
         margin-top: 10px;
+    }
+    .catalogue-wrapper{
+        max-width: 747px;
+        margin-top: 20px;
+    }
+    .catalogue-title{
+        font-size: 20px;
+    }
+    .catalogue-container{
+        gap: 10px;
+    }
+    .catalogue-card-wrapper{
+        max-width: 45%;
+        font-size: 14px;
+        padding: 10px;
+        padding-top: 5px;
+        gap: 5px;
+    }
+    .catalogue-card-wrapper img{
+        width: 90%;
     }
 }

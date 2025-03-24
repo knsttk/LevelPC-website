@@ -17,7 +17,7 @@
         <div class="configurator-container">
             <div class="your-build-head">
                 <h2 class="block-title">Ваша сборка:</h2>
-                <h2 class="mobile-price-label">144 440 <span style="color:#9f0e0e;">₽</span></h2>
+                <p class="help-number">Возникли проблемы со сборкой? <br>Мы готовы помочь! <span style="color: #fff;">8-999-999-99-99</span></p>
             </div>
             <div class="configurator-build-container">
                 <img src="assets/Images/goods/no-pc.png" alt="" class="build-case-image">
@@ -25,7 +25,7 @@
                     <div class="build-part chosen-part">
                         <div class="part-text">
                             <p class="build-part-title">Процессор</p>
-                            <p class="build-part-name"><a href="">Intel Core i5-12400F<br>4.8 ГГц, LGA 1700</a></p>
+                            <p class="build-part-name"><a href="">Intel Core i5-12400F</a></p>
                             <p class="build-part-price">15 000 <span style="color:#9f0e0e;">₽</span></p>
                         </div>
                         <button class="part-replace-button">
@@ -309,8 +309,64 @@
             <img src="assets/icons/filters-icon.svg" alt="">
             <p class="filters-title">Фильтры</p>
         </div>
+        <div class="mobile-filters-wrapper">
+            <button class="exit-filter-popup"><img src="assets/icons/close-filter-icon.svg" alt=""></button>
+            <p class="mobile-filters-title">Фильтры</p>
+                <div class="specs-drop-list mobile-filters-container">
+                    <div class="specs-drop-list-main mobile-drop-list-main">
+                        <p class="drop-list-title">Цена</p>
+                        <img src="assets/icons/droplist-arrow-icon.svg" alt="" class="droplist-icon">
+                        <div class="droplist-list price-drop-list">От
+                            <input type="text" class="droplist-lowest-price" placeholder="0">
+                            До
+                            <input type="text" class="droplist-highest-price" placeholder="50 000">
+                        </div>
+                    </div>
+                    <div class="specs-drop-list-main mobile-drop-list-main">
+                        <p class="drop-list-title">Производитель</p>
+                        <img src="assets/icons/droplist-arrow-icon.svg" alt="" class="droplist-icon">
+                        <div class="droplist-list">
+                            <div class="droplist-item droplist-item_1">
+                                <p>AsRock</p>
+                                <input type="checkbox" class="droplist-checkbox">
+                            </div>
+                            <div class="droplist-item droplist-item_1">
+                                <p>ColorFul</p>
+                                <input type="checkbox" class="droplist-checkbox">
+                            </div>
+                            <div class="droplist-item droplist-item_1">
+                                <p>GIGABYTE</p>
+                                <input type="checkbox" class="droplist-checkbox">
+                            </div>
+                            <div class="droplist-item droplist-item_1">
+                                <p>MaxSun</p>
+                                <input type="checkbox" class="droplist-checkbox">
+                            </div>
+                            <div class="droplist-item droplist-item_1">
+                                <p>MSI</p>
+                                <input type="checkbox" class="droplist-checkbox">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            <div class="mobile-filters-bottom">
+                <div class="mobile-filters-buttons">
+                    <button class="apply-filters-button">Применить фильтры</button>
+                    <button class="cancel-filters-button">Сбросить</button>
+                </div>
+            </div>
+        </div>
         <div class="parts-list-container">
             <div class="specs-drop-list">
+                <div class="specs-drop-list-main">
+                    <p class="drop-list-title">Цена</p>
+                    <img src="assets/icons/droplist-arrow-icon.svg" alt="" class="droplist-icon">
+                    <div class="droplist-list price-drop-list">От
+                        <input type="text" class="droplist-lowest-price" placeholder="0">
+                        До
+                        <input type="text" class="droplist-highest-price" placeholder="50 000">
+                    </div>
+                </div>
                 <div class="specs-drop-list-main">
                     <p class="drop-list-title">Производитель</p>
                     <img src="assets/icons/droplist-arrow-icon.svg" alt="" class="droplist-icon">

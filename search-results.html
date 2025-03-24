@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Каталог | LevelPC</title>
+    <link rel="icon" href="assets/icons/favicon.svg" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+</head>
+<body>
+    <section class="search-results-wrapper">
+        <h2 class="search-results-title">Поиск <span style="color:#9e9e9e; font-weight: normal;">(0)</span></h2>
+        <div class="applied-filters-flex">
+            <p class="applied-filters-title">Фильтры:</p>
+            <div class="applied-filter">
+                <p class="applied-filter-name">RTX 3060</p>
+                <img src="assets/icons/remove-filter-icon.svg" alt="">
+            </div>
+        </div>
+        <div class="search-results-sorting">
+            <div class="specs-drop-list-main sort-droplist">
+                <p class="drop-list-title">По релевантности</p>
+                <img src="assets/icons/droplist-arrow-icon.svg" alt="" class="droplist-icon">
+                <div class="droplist-list ">
+                    <div class="droplist-item droplist-item_1 sort-droplist-item">
+                        <p>По убыванию цены</p>
+                    </div>
+                    <div class="droplist-item droplist-item_1 sort-droplist-item">
+                        <p>По возрастанию цены</p>
+                    </div>
+                </div>
+            </div>
+            <button class="search-orientation-button">
+                <img src="assets/icons/search-horizontal-icon.svg" alt="">
+            </button>
+            <button class="search-orientation-button">
+                <img src="assets/icons/search-vertical-icon.svg" alt="">
+            </button>
+        </div>
+        <div class="search-results-container">
+            <div class="left-filters-wrapper">
+                <p class="left-filters-title">Найдено в разделах</p>
+                <div class="filters-block">
+                    <p class="filter-title">Тип фильтра</p>
+                    <input type="text" class="header-search filter-search-field" placeholder="Поиск">
+                    <ul class="filters-table">
+                        <li class="filter-in-table">
+                            <label class="custom-checkbox">
+                                <input type="checkbox" class="original-checkbox">
+                                <span class="checkmark"></span>
+                            </label>
+                            Вариант
+                        </li>
+                    </ul>
+                </div>
+                <div class="filters-block">
+                    <p class="filter-title">Цена</p>
+                    <div class="filter-price-inputs">
+                        <input type="text" class="filter-price-input" placeholder="0">
+                        <input type="text" class="filter-price-input" placeholder="140 000">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="script.js"></script>
+</body>
+</html>

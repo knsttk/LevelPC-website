@@ -384,3 +384,22 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 });
+document.addEventListener("DOMContentLoaded", function () {
+    const filtersButton = document.querySelector(".filters-button");
+    const mobileFiltersWrapper = document.querySelector(".mobile-filters-wrapper");
+    const exitFilterButton = document.querySelector(".exit-filter-popup");
+
+    filtersButton.addEventListener("click", function () {
+        mobileFiltersWrapper.style.display = "block"; // Делаем меню видимым
+        setTimeout(() => {
+            mobileFiltersWrapper.style.left = "0"; // Выдвигаем его слева
+        }, 10); // Небольшая задержка, чтобы анимация сработала
+    });
+
+    exitFilterButton.addEventListener("click", function () {
+        mobileFiltersWrapper.style.left = "-100%"; // Прячем меню
+        setTimeout(() => {
+            mobileFiltersWrapper.style.display = "none"; // Скрываем полностью после анимации
+        }, 300); // Задержка равна времени анимации (0.3s)
+    });
+});
